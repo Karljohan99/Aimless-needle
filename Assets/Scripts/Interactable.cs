@@ -5,6 +5,10 @@ using UnityEngine.Tilemaps;
 
 public class Interactable : MonoBehaviour
 {
+    private Inventory inventory;
+    public GameObject itemButton;
+
+
     void Start()
     {
         
@@ -13,18 +17,39 @@ public class Interactable : MonoBehaviour
 
     void Update()
     {
-        
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (collision.CompareTag("Player"))
         {
-            Player player = collision.gameObject.GetComponent<Player>();
-            GameObject.Destroy(gameObject);
+            for (int i=0; i<inventory.slots.Length; i++)
+            {
 
-            //TODO: kustutamise asemel pane gameobject invetori
+                if (inventory.isFull[i] ==false)
+                {
+                    if (Input.GetKey(KeyCode.Q))
+                    {                     
+                        inventory.isFull[i] = true;
+                        Instantiate(itemButton, inventory.slots[i].transform, false);
+                        Destroy(gameObject);
+                    }
+                    break;
+                }
+            }
 
+
+          
         }
+    }
+
+    public bool IsStackable()
+    {
+        if (itemButton.CompareTag(gameObject.tag)==true)
+        {
+            return true;
+        }
+        return false;
     }
 }
