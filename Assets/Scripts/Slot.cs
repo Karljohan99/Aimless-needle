@@ -1,41 +1,51 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
     private Inventory inventory;
     public int i;
+    public TextMeshProUGUI countText;
+    
 
-    // Start is called before the first frame update
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+     
     }
 
-    // Update is called once per frame
     void Update()
     {
-       if (transform.childCount <=0)
+       if (transform.childCount <=1)
         {
             inventory.isFull[i] = false;
+            inventory.slots[i].tag = "Untagged";
         }
-       if (Input.GetKey(KeyCode.D))
-        {
-            DropItem();
-        }
+        countText.text = inventory.count[i].ToString();
+       
     }
 
-    public void DropItem()
-    {
-        foreach (Transform child in transform)
-        {
-            GameObject.Destroy(child.gameObject);
-        }
-    }
+    //public void dropitem()
+    //{
+    //    foreach (transform child in transform)
+    //    {
+    //        gameobject.destroy(child.gameobject);
+    //    }
+    //    inventory.count[i] -= 1;
+    //}
 
     public void ItemSelected()
     {
 
     }
+
+    public void SetCount(int count)
+    {
+        countText.text = count.ToString();
+    }
+
 }

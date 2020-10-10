@@ -7,6 +7,8 @@ public class Interactable : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
+    public int maxStack;
+    
 
 
     void Start()
@@ -18,38 +20,51 @@ public class Interactable : MonoBehaviour
     void Update()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            for (int i=0; i<inventory.slots.Length; i++)
+            int slot = IsStackable();
+            if (slot != -1 && Input.GetKey(KeyCode.Q))
             {
-
-                if (inventory.isFull[i] ==false)
+                Destroy(gameObject);
+                inventory.count[slot] += 1;
+                
+                
+            }
+            else {
+                for (int i = 0; i < inventory.slots.Length; i++)
                 {
-                    if (Input.GetKey(KeyCode.Q))
-                    {                     
-                        inventory.isFull[i] = true;
-                        Instantiate(itemButton, inventory.slots[i].transform, false);
-                        Destroy(gameObject);
+                    if (inventory.isFull[i] == false)
+                    {
+                        if (Input.GetKey(KeyCode.Q))
+                        {
+                            inventory.isFull[i] = true;
+                            Instantiate(itemButton, inventory.slots[i].transform, false);
+                            Destroy(gameObject);
+                            inventory.slots[i].tag = gameObject.tag;
+                            inventory.count[i] += 1;
+                            
+                        }
+                        break;
                     }
-                    break;
                 }
             }
-
-
-          
         }
     }
 
-    public bool IsStackable()
+    public int IsStackable()
     {
-        if (itemButton.CompareTag(gameObject.tag)==true)
+        for (int i = 0; i < inventory.slots.Length; i++)
         {
-            return true;
+            if (inventory.slots[i].CompareTag(gameObject.tag) == true && maxStack > inventory.count[i])
+            {
+                return i;
+            }
         }
-        return false;
+        return -1;
     }
 }

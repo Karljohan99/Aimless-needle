@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 796737614021788641}
   m_Layer: 0
   m_Name: Tree 1
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,3 +153,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 2056662931594565594, guid: d7247d44bab92284cad343787e4817b8, type: 3}
+  maxStack: 10
