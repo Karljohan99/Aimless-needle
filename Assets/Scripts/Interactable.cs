@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class Interactable : MonoBehaviour
 {
@@ -10,10 +11,9 @@ public class Interactable : MonoBehaviour
     public int maxStack;
     
 
-
     void Start()
     {
-        
+
     }
 
 
@@ -32,13 +32,11 @@ public class Interactable : MonoBehaviour
             {
                 Destroy(gameObject);
                 inventory.count[slot] += 1;
-                
-                
             }
             else {
                 for (int i = 0; i < inventory.slots.Length; i++)
                 {
-                    if (inventory.isFull[i] == false)
+                    if (!inventory.isFull[i])
                     {
                         if (Input.GetKey(KeyCode.Q))
                         {
@@ -46,6 +44,7 @@ public class Interactable : MonoBehaviour
                             Instantiate(itemButton, inventory.slots[i].transform, false);
                             Destroy(gameObject);
                             inventory.slots[i].tag = gameObject.tag;
+                            itemButton.tag = gameObject.tag;
                             inventory.count[i] += 1;
                             
                         }
@@ -67,4 +66,6 @@ public class Interactable : MonoBehaviour
         }
         return -1;
     }
+
+   
 }
