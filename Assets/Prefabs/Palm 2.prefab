@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3643494926243711896}
   - component: {fileID: 260545927130256935}
   - component: {fileID: 6502119034984384260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Palm 2
   m_TagString: Tree
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 901676897
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 5282237714449629752, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
