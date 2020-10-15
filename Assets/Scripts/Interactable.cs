@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
     private Inventory inventory;
     public GameObject itemButton;
     public int maxStack;
+    public float damage = 0;
+    public float cooldown = 1;
     
 
     void Start()
@@ -28,12 +30,12 @@ public class Interactable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             int slot = IsStackable();
-            if (slot != -1 && Input.GetKey(KeyCode.Q))
+            if (slot >= 0 && Input.GetKey(KeyCode.Q))
             {
                 Destroy(gameObject);
                 inventory.count[slot] += 1;
             }
-            else {
+            else if (slot == -1) {
                 for (int i = 0; i < inventory.slots.Length; i++)
                 {
                     if (!inventory.isFull[i])
@@ -59,9 +61,11 @@ public class Interactable : MonoBehaviour
     {
         for (int i = 0; i < inventory.slots.Length; i++)
         {
-            if (inventory.slots[i].CompareTag(gameObject.tag) == true && maxStack > inventory.count[i])
+            if (inventory.slots[i].CompareTag(gameObject.tag) == true)
             {
-                return i;
+                if (maxStack > inventory.count[i]) return i;
+                else return -2;
+                
             }
         }
         return -1;

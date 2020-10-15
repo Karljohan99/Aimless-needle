@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryButton : MonoBehaviour
 {
-    public GameObject dropItem;
+    public Interactable dropItem;
     private Inventory inventory;
 
     void Start()

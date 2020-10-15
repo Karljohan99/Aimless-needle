@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 106433574373761382}
   - component: {fileID: 3643494926243711896}
   - component: {fileID: 260545927130256935}
-  - component: {fileID: 6502119034984384260}
+  - component: {fileID: -1629610094971082462}
   m_Layer: 8
   m_Name: Palm 2
   m_TagString: Tree
@@ -127,7 +127,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1.81}
   serializedVersion: 2
-  m_Radius: 0.84
+  m_Radius: 1
 --- !u!114 &260545927130256935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007bbc459a3293d4580b78a54bc42c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6502119034984384260
+--- !u!114 &-1629610094971082462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,8 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4480091569482114796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 990b7370f6cae25478544393d400fec0, type: 3}
+  m_Script: {fileID: 11500000, guid: e2c93ba20e2e2bd4fbd05b004ed7a45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 2056662931594565594, guid: d7247d44bab92284cad343787e4817b8, type: 3}
-  maxStack: 10
+  dropItem: {fileID: 7361891605212315333, guid: 506b733c88f3d804abc974a60a60e84f, type: 3}
