@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class EnemyWin : MonoBehaviour
 {
-    public bool[] isFull;
-    public Slot[] slots;
-    public int[] count;
-
     void Start()
     {
         
@@ -15,6 +11,6 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        
+        if (transform.childCount == 0) Events.WinLevel();
     }
 }
