@@ -25,15 +25,20 @@ public class EnemyFollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
-        if(distanceFromPlayer<lineOfSite)
+        if(distanceFromPlayer<lineOfSite && distanceFromPlayer > 1.5)
         {
             tr.enabled = true;
-        } else
+        } else if (distanceFromPlayer <= 1.5)
         {
             tr.enabled = false;
-            transform.position = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z);
+        } else 
+        {
+            tr.enabled = false;
+            //transform.parent.position = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z);
+            //transform.position = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z);
         }
         
     }
