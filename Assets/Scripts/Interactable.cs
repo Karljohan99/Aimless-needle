@@ -15,13 +15,13 @@ public class Interactable : MonoBehaviour
 
     void Start()
     {
-
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
 
     void Update()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        //inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         
     }
 

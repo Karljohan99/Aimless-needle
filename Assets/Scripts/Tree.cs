@@ -9,13 +9,13 @@ public class Tree : MonoBehaviour
 
     void Start()
     {
-        
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        //inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
