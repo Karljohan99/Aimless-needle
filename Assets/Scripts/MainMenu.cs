@@ -16,6 +16,11 @@ public class MainMenu : MonoBehaviour
     {
         
     }
+
+    public void ReturnToMain()
+    {
+        SceneManager.LoadScene("Start menu");
+    }
     public void NewGame()
     {
         SceneManager.LoadScene("SampleScene");

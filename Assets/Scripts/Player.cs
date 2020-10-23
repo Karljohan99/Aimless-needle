@@ -8,11 +8,15 @@ public class Player : MonoBehaviour
 {
     public static Player Instance;
 
+    public GameObject winPanel;
+    public GameObject losePanel;
+
     public RectTransform HealthBar;
     public TextMeshProUGUI HealthText;
 
     private float health;
     private Inventory inventory;
+
 
     private void Awake()
     {
@@ -41,7 +45,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void SetHealth(float value)
@@ -56,7 +60,9 @@ public class Player : MonoBehaviour
 
     public void WinLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        winPanel.SetActive(true);
+        gameObject.SetActive(false);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Die()
@@ -69,7 +75,9 @@ public class Player : MonoBehaviour
                 slot.DropItem();
             }
         }
-        transform.position = new Vector3(-9, -27, 0);
-        Events.SetHealth(100);
+        losePanel.SetActive(true);
+        gameObject.SetActive(false);
+        //transform.position = new Vector3(-9, -27, 0);
+        //Events.SetHealth(100);
     }
 }
