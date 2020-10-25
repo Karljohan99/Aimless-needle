@@ -49,7 +49,7 @@ public class EnemyHealth : MonoBehaviour
                 CurrentHealth -= weapon.damage;
                 Healthbar.sizeDelta = new Vector2(CurrentHealth/MaxHealth*100, Healthbar.sizeDelta.y);
                 nextHit = Time.time + weapon.cooldown;
-                if (CurrentHealth <= 0) Destroy(gameObject);
+                if (CurrentHealth <= 0) Destroy(transform.parent.gameObject);
             }
         }
     }
