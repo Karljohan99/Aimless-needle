@@ -16,4 +16,14 @@ public static class Events
 
     public static event Action OnDie;
     public static void Die() => OnDie?.Invoke();
+
+    public static event Action OnNextCraftingCard;
+    public static void NextCraftingCard() => OnNextCraftingCard?.Invoke();
+
+    public static event Action OnPreviousCraftingCard;
+    public static void PreviousCraftingCard() => OnPreviousCraftingCard?.Invoke();
+
+    public static event Action<int> OnRemoveItem;
+    public static void RemoveItem(int index) => OnRemoveItem?.Invoke(index);
+
 }

@@ -19,6 +19,13 @@ public class Slot : MonoBehaviour
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        Events.OnRemoveItem += RemoveItem;
+    }
+
+    private void OnDestroy()
+    {
+        Events.OnRemoveItem -= RemoveItem;
+;
     }
 
     void Update()
@@ -49,6 +56,19 @@ public class Slot : MonoBehaviour
         {
             Destroy(gameObject.transform.GetChild(1).gameObject);
             UnselectItem();
+        }
+    }
+
+    public void RemoveItem(int index) 
+    {
+        if (index == i)
+        {
+            inventory.count[i] -= 1;
+            if (inventory.count[i] < 1)
+            {
+                Destroy(gameObject.transform.GetChild(1).gameObject);
+                UnselectItem();
+            }
         }
     }
 
