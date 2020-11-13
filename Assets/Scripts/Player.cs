@@ -19,7 +19,8 @@ public class Player : MonoBehaviour
 
 
     private void Awake()
-    {
+    {            
+        //DontDestroyOnLoad(transform.gameObject);
         Instance = this;
         inventory = gameObject.GetComponent<Inventory>();
 
