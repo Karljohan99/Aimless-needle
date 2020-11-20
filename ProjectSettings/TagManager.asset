@@ -8,6 +8,8 @@ TagManager:
   - Tree
   - Item
   - Stone Axe
+  - Stone Pickaxe
+  - Stone Shovel
   layers:
   - Default
   - TransparentFX

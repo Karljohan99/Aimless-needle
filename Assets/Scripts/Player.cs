@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public RectTransform HealthBar;
     public TextMeshProUGUI HealthText;
 
+    public AudioClip Footstep;
+
     private float health;
     private Inventory inventory;
 
@@ -80,5 +82,10 @@ public class Player : MonoBehaviour
         gameObject.SetActive(false);
         //transform.position = new Vector3(-9, -27, 0);
         //Events.SetHealth(100);
+    }
+
+    public void PlayFootstep()
+    {
+        GetComponent<AudioSource>().PlayOneShot(Footstep);
     }
 }

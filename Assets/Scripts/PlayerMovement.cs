@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
         movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             
 
@@ -30,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        
         this.transform.position += movement*Time.deltaTime*movementSpeed;
     }
 }

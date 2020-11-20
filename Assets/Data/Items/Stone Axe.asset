@@ -17,4 +17,4 @@ MonoBehaviour:
   Damage: 2
   Cooldown: 1
   Tag: Stone Axe
-  Sprite: {fileID: 21300000, guid: 1dfdddbe4ad5c2d40b84a6d8b004e512, type: 3}
+  Sprite: {fileID: -1393759404747181754, guid: 547597e2d9e1fe345b3af7d49329be4c, type: 3}

@@ -20,20 +20,22 @@ public class Tree : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && isAxeSelected() && Input.GetKey(KeyCode.R))
+        InventoryButton axe = isAxeSelected();
+        if (collision.CompareTag("Player") && axe != null && Input.GetKey(KeyCode.R))
         {
             Destroy(gameObject);
+            axe.GetComponent<AudioSource>().Play();
             Instantiate(dropItem, transform.position, Quaternion.identity);
             
         }
     }
 
-    private bool isAxeSelected()
+    private InventoryButton isAxeSelected()
     {
         foreach (Slot slot in inventory.slots)
         {
-            if (slot.isSelected && slot.tag == "Stone Axe") return true;
+            if (slot.isSelected && slot.tag == "Stone Axe") return slot.transform.GetChild(1).GetComponent<InventoryButton>();
         }
-        return false;
+        return null;
     }
 }

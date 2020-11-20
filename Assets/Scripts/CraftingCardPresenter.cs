@@ -79,7 +79,6 @@ public class CraftingCardPresenter : MonoBehaviour
 
     public void CraftItem()
     {
-        print("Craft");
         foreach (CraftingIngredientData ingredient in Data.Panels[index].Ingredients) 
         {
             int i = tags.IndexOf(ingredient.Item.Tag);

@@ -14,14 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panels:
   - Ingredients:
+    - Amount: 1
+      Item: {fileID: 11400000, guid: 07186b1bf799cde4cb2deece0d30a5a7, type: 2}
+    - Amount: 1
+      Item: {fileID: 11400000, guid: 5f71d0d5e13915f4b80a1587b02b0d13, type: 2}
+    TargetItem: {fileID: 11400000, guid: a56bcac082c3e9549ac878eed0c79849, type: 2}
+  - Ingredients:
     - Amount: 2
       Item: {fileID: 11400000, guid: 07186b1bf799cde4cb2deece0d30a5a7, type: 2}
     - Amount: 1
       Item: {fileID: 11400000, guid: 5f71d0d5e13915f4b80a1587b02b0d13, type: 2}
     TargetItem: {fileID: 11400000, guid: d1629bc06d6b45b40bb3871187aa0c43, type: 2}
   - Ingredients:
+    - Amount: 3
+      Item: {fileID: 11400000, guid: 07186b1bf799cde4cb2deece0d30a5a7, type: 2}
     - Amount: 1
       Item: {fileID: 11400000, guid: 5f71d0d5e13915f4b80a1587b02b0d13, type: 2}
-    - Amount: 2
-      Item: {fileID: 11400000, guid: 07186b1bf799cde4cb2deece0d30a5a7, type: 2}
-    TargetItem: {fileID: 11400000, guid: d1629bc06d6b45b40bb3871187aa0c43, type: 2}
+    TargetItem: {fileID: 11400000, guid: 5e91ce29d55b111479144456a3be9025, type: 2}

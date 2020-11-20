@@ -26,4 +26,7 @@ public static class Events
     public static event Action<int> OnRemoveItem;
     public static void RemoveItem(int index) => OnRemoveItem?.Invoke(index);
 
+    public static event Action<bool> OnSetDig;
+    public static void SetDig(bool value) => OnSetDig?.Invoke(value);
+
 }
