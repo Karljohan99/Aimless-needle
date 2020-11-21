@@ -58393,7 +58393,7 @@ SpriteRenderer:
   m_SortingLayerID: -1987725943
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5276167833439042715, guid: e3268f22adee6f04e857126e7dbce6eb, type: 3}
+  m_Sprite: {fileID: -4032481707582436298, guid: c782e8457dfd54147be1a5fdeca74123, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -58411,14 +58411,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498723297}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.47, y: -19.78, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.16676876, w: 0.98599607}
+  m_LocalPosition: {x: -11.17, y: -27.7, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1990331005}
   m_Father: {fileID: 0}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.2}
 --- !u!114 &498723302
 MonoBehaviour:
   m_ObjectHideFlags: 0
