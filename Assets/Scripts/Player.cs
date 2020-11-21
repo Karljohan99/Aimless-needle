@@ -50,7 +50,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-
     }
 
     public void SetHealth(float value)

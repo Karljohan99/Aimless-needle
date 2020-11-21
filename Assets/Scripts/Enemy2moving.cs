@@ -45,11 +45,6 @@ public class Enemy2moving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsVisible)
-        {
-            //audioSource.Play();
-            transform.GetComponent<AudioSource>().Play();
-        }
         previousPos = transform.position;
 
         
@@ -60,8 +55,10 @@ public class Enemy2moving : MonoBehaviour
             
             if (Time.time >= NextSpawnTime && stone != null)
             {
+                transform.GetComponent<AudioSource>().Play();
                 EnemyProjectile enemyprojectile = GameObject.Instantiate<EnemyProjectile>(stone, transform.position, Quaternion.identity, null);
                 NextSpawnTime += StoneDelay;
+                
             }
             else if (Time.time >= NextSpawnTime)
             {
