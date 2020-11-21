@@ -13,6 +13,14 @@ public class Enemy2moving : MonoBehaviour
     public EnemyProjectile stone;
     public float StoneDelay;
     private float NextSpawnTime;
+    public string moving;
+
+    private float RotateSpeed = 2.6f;
+    private float Radius = 1.2f;
+
+    private Vector2 _centre;
+    private float _angle;
+
 
 
     // Start is called before the first frame update
@@ -22,7 +30,9 @@ public class Enemy2moving : MonoBehaviour
         min = transform.position.x;
         max = transform.position.x + 3;
         NextSpawnTime = Time.time;
-        
+
+        _centre = transform.position;
+
     }
 
     // Update is called once per frame
@@ -30,12 +40,12 @@ public class Enemy2moving : MonoBehaviour
     {
         previousPos = transform.position;
 
-        transform.position = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z);
-
+        
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
         if (distanceFromPlayer < lineOfSite)
         {
+            
             if (Time.time >= NextSpawnTime && stone != null)
             {
                 EnemyProjectile enemyprojectile = GameObject.Instantiate<EnemyProjectile>(stone, transform.position, Quaternion.identity, null);
@@ -46,8 +56,23 @@ public class Enemy2moving : MonoBehaviour
                 NextSpawnTime += StoneDelay;
             }
 
+        } else { NextSpawnTime = Time.time; }
+
+        if (moving == "circle")
+        {
+            _angle += RotateSpeed * Time.deltaTime;
+
+            var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
+            transform.position = _centre + offset;
+
+
+        } else if (moving == "line")
+        {
+            transform.position = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z);
+
         }
-        if (previousPos.x -transform.position.x >= 0.01f)
+
+        if (previousPos.x - transform.position.x >= 0.01f)
         {
             transform.localScale = new Vector3(-System.Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
@@ -55,8 +80,6 @@ public class Enemy2moving : MonoBehaviour
         {
             transform.localScale = new Vector3(System.Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
-
-
 
 
     }

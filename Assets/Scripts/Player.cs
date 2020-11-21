@@ -29,8 +29,10 @@ public class Player : MonoBehaviour
         Events.OnWinLevel += WinLevel;
         Events.OnSetHealth += SetHealth;
         Events.OnRequestHealth += RequestHealth;
-        Events.OnDie += Die; 
+        Events.OnDie += Die;
+
         
+
     }
 
     private void OnDestroy()

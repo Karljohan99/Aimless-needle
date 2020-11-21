@@ -13,6 +13,11 @@ public class Inventory : MonoBehaviour
         
     }
 
+    private void Awake()
+    {
+        //DontDestroyOnLoad(transform.gameObject);
+    }
+
     void Update()
     {
         
