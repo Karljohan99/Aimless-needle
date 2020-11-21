@@ -21,6 +21,12 @@ public class Enemy2moving : MonoBehaviour
     private Vector2 _centre;
     private float _angle;
 
+    //public AudioClip Footstep;
+
+    private bool IsVisible;
+
+    //public AudioSource audioSource;
+
 
 
     // Start is called before the first frame update
@@ -32,12 +38,18 @@ public class Enemy2moving : MonoBehaviour
         NextSpawnTime = Time.time;
 
         _centre = transform.position;
+        IsVisible = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (IsVisible)
+        {
+            //audioSource.Play();
+            transform.GetComponent<AudioSource>().Play();
+        }
         previousPos = transform.position;
 
         
@@ -88,5 +100,16 @@ public class Enemy2moving : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, lineOfSite);
+    }
+
+    public void PlayFootstep()
+    {
+        //GetComponent<AudioSource>().PlayOneShot(Footstep);
+    }
+
+
+    private void OnBecameVisible()
+    {
+        IsVisible = true;
     }
 }
