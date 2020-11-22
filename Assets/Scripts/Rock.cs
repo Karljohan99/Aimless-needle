@@ -30,6 +30,7 @@ public class Rock : MonoBehaviour
         if (cooldown < Time.time && collision.CompareTag("Player") && pickaxe != null && Input.GetKey(KeyCode.R))
         {
             Destroy(gameObject);
+            pickaxe.GetComponent<AudioSource>().Play();
             switch (currentSize) 
             {
                 case 1:
