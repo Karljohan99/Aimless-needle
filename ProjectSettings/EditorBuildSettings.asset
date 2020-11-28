@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start menu.unity
     guid: 6f6fb04d4babaae428132a71d6c01e09
   - enabled: 1
+    path: Assets/Scenes/Player Scene.unity
+    guid: 626ca59de641de542803056019484878
+  - enabled: 1
     path: Assets/Scenes/Grass Island.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

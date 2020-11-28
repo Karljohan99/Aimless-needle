@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
     
     void Update()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("Player")?.GetComponent<Inventory>();
         if(enemy.aiPath.desiredVelocity.x >= 0.01f)
         {
             Healthbar.transform.localScale = new Vector3(1f, 1f, 1f);

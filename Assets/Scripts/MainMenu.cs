@@ -23,7 +23,8 @@ public class MainMenu : MonoBehaviour
     }
     public void NewGame()
     {
-        SceneManager.LoadScene("Grass Island");
+        SceneManager.LoadScene("Player Scene");
+        SceneManager.LoadScene("Grass Island", LoadSceneMode.Additive);
     }
     public void QuitToDesktop()
     {
