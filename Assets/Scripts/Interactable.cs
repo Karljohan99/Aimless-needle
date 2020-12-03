@@ -8,6 +8,7 @@ public class Interactable : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
+    public float restoreHP = 0;
     public int maxStack;
     public float damage = 0;
     public float cooldown = 1;
