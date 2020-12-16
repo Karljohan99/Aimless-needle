@@ -8,13 +8,23 @@ public class Showel : MonoBehaviour
 
     public DiggingProbabilityData Data;
 
+    public float cooldown = 1;
+
     private Inventory inventory;
 
     private bool canDig = true;
 
+    private float nextTime;
+
+    private float checkDelay = 0.5f;
+
+    private float nextCheckTime;
+
     private void Awake()
     {            
         Events.OnSetDig += SetDig;
+        nextTime = Time.time;
+        nextCheckTime = Time.time;
     }
 
     private void OnDestroy()
@@ -29,7 +39,13 @@ public class Showel : MonoBehaviour
 
     void Update()
     {
-        if (canDig && isShovelSelected() && Input.GetKey(KeyCode.R)) 
+        if (canDig) print(Time.time);
+        if (nextCheckTime < Time.time) 
+        {
+            canDig = true;
+            nextCheckTime = Time.time + checkDelay;
+        }
+        if (nextTime < Time.time && canDig && isShovelSelected() && Input.GetKeyDown(KeyCode.R)) 
         {
             Instantiate(Dirt, GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
             GetComponent<AudioSource>().Play();
@@ -40,6 +56,7 @@ public class Showel : MonoBehaviour
                     Instantiate(Data.Items[i], GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
                 }
             }
+            nextTime = Time.time + cooldown;
             canDig = false;
         }
     }

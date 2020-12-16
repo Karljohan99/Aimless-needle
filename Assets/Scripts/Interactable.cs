@@ -12,10 +12,12 @@ public class Interactable : MonoBehaviour
     public float damage = 0;
     public float cooldown = 1;
     
+    private float nextTime;
 
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player")?.GetComponent<Inventory>();
+        nextTime = Time.time;
     }
 
 
@@ -27,7 +29,7 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (nextTime < Time.time && collision.CompareTag("Player"))
         {
             int slot = IsStackable();
             if (slot >= 0 && Input.GetKey(KeyCode.Q))
@@ -48,7 +50,6 @@ public class Interactable : MonoBehaviour
                             inventory.slots[i].tag = gameObject.tag;
                             itemButton.tag = gameObject.tag;
                             inventory.count[i] += 1;
-                            
                         }
                         break;
                     }
