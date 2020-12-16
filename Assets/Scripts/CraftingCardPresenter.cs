@@ -48,22 +48,48 @@ public class CraftingCardPresenter : MonoBehaviour
         {
             tags.Add(slot.tag);
         }
-        //print(checkItemCount(tags));
         CraftButton.enabled = inventory.isFull.Contains(false) && checkItemCount() && checkTargetItem();
-        //print(ingedientTags.SetEquals(tags));
-        
+        if (!CraftButton.isActiveAndEnabled && CraftButton.transform.GetChild(0).GetComponent<Image>().color != Color.gray) 
+        {
+            Color color = CraftButton.GetComponent<Image>().color;
+            color.a = 0;
+            CraftButton.GetComponent<Image>().color = color;
+            CraftButton.transform.GetChild(0).GetComponent<Image>().color = Color.gray;
+        } 
+        if (CraftButton.isActiveAndEnabled && CraftButton.transform.GetChild(0).GetComponent<Image>().color != Color.white)
+        {
+            Color color = CraftButton.GetComponent<Image>().color;
+            color.a = 0.5f;
+            CraftButton.GetComponent<Image>().color = color;
+            CraftButton.transform.GetChild(0).GetComponent<Image>().color = Color.white;
+        }
     }
 
     private bool checkItemCount()
     {
-        foreach (CraftingIngredientData ingredient in Data.Panels[index].Ingredients)
+        bool check = true;
+        for (int j = 0; j < Data.Panels[index].Ingredients.Length; j++) 
         {
+            bool itemCheck = true;
+            CraftingIngredientData ingredient = Data.Panels[index].Ingredients[j];
             int i = tags.IndexOf(ingredient.Item.Tag);
-            if (i < 0) return false;
-            if (inventory.count[i] < ingredient.Amount) return false;
-
+            if (i < 0) 
+            {
+                ItemCardPanel.transform.GetChild(j).GetComponent<Image>().color = Color.red;
+                itemCheck = false;
+                check = false;
+                continue;
+            }
+            if (inventory.count[i] < ingredient.Amount) 
+            {
+                ItemCardPanel.transform.GetChild(j).GetComponent<Image>().color = Color.red;
+                itemCheck = false;
+                check = false;
+                continue;
+            }
+            ItemCardPanel.transform.GetChild(j).GetComponent<Image>().color = Color.white;
         }
-        return true;
+        return check;
     }
 
     private bool checkTargetItem()

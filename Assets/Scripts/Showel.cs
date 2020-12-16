@@ -39,7 +39,6 @@ public class Showel : MonoBehaviour
 
     void Update()
     {
-        if (canDig) print(Time.time);
         if (nextCheckTime < Time.time) 
         {
             canDig = true;
