@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
     public void SetHealth(float value)
     {
         health = Mathf.Max(value, 0);
+        health = Mathf.Clamp(health, 0, 100);
         HealthText.text = health.ToString();
         HealthBar.sizeDelta = new Vector2(health*5, HealthBar.sizeDelta.y);
         if (health == 0) Die();
