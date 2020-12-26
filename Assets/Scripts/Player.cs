@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public GameObject winPanel;
     public GameObject losePanel;
 
+
     public RectTransform HealthBar;
     public TextMeshProUGUI HealthText;
 
@@ -69,6 +70,7 @@ public class Player : MonoBehaviour
         gameObject.SetActive(false);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 
     public void Die()
     {
