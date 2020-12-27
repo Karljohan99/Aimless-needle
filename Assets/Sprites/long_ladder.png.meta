@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: b053590a5fc59674b95e92a9c83865f0
+guid: a46360a212c0e28449f86c60e22814b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5254071379340993404
-    second: tXR46NJ_2x_0
+      213: -2164606643142161842
+    second: long_ladder_0
   - first:
-      213: 6420627363590058663
-    second: tXR46NJ_2x_1
+      213: 1298971372891527645
+    second: long_ladder_1
   - first:
-      213: 1324655680659690879
-    second: tXR46NJ_2x_2
+      213: 8249304695406954247
+    second: long_ladder_2
   - first:
-      213: 4032691190144749165
-    second: tXR46NJ_2x_3
+      213: -5231164100622725431
+    second: long_ladder_3
+  - first:
+      213: -3611631942153123504
+    second: long_ladder_4
+  - first:
+      213: -1630153845414885624
+    second: long_ladder_5
+  - first:
+      213: 3458095548442798388
+    second: long_ladder_6
+  - first:
+      213: -1622603617405820313
+    second: long_ladder_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 96
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tXR46NJ_2x_0
+      name: long_ladder_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 18
-        width: 78
-        height: 60
+        x: 0
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c73aa2e05163ae840800000000000000
-      internalID: 5254071379340993404
+      spriteID: e4a8f050ab5c5f1e0800000000000000
+      internalID: -2164606643142161842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tXR46NJ_2x_1
+      name: long_ladder_1
       rect:
         serializedVersion: 2
-        x: 118
-        y: 18
-        width: 52
-        height: 64
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a230f9b196aa1950800000000000000
-      internalID: 6420627363590058663
+      spriteID: dd9d996d49fd60210800000000000000
+      internalID: 1298971372891527645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tXR46NJ_2x_2
+      name: long_ladder_2
       rect:
         serializedVersion: 2
-        x: 218
-        y: 18
-        width: 44
-        height: 64
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f759c6fb25f126210800000000000000
-      internalID: 1324655680659690879
+      spriteID: 70781bde9ea6b7270800000000000000
+      internalID: 8249304695406954247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tXR46NJ_2x_3
+      name: long_ladder_3
       rect:
         serializedVersion: 2
-        x: 312
-        y: 20
-        width: 48
-        height: 52
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +190,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6ecc65754ff6f730800000000000000
-      internalID: 4032691190144749165
+      spriteID: 9ce4b9467fb2767b0800000000000000
+      internalID: -5231164100622725431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: long_ladder_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059428442e7e0edc0800000000000000
+      internalID: -3611631942153123504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: long_ladder_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8070fcae6b78069e0800000000000000
+      internalID: -1630153845414885624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: long_ladder_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439ea4c549f9dff20800000000000000
+      internalID: 3458095548442798388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: long_ladder_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762234d5b9a5b79e0800000000000000
+      internalID: -1622603617405820313
       vertices: []
       indices: 
       edges: []
