@@ -25,7 +25,7 @@ public class TutorialManager : MonoBehaviour
 
         if (popUpIndex == 1)
         {
-            Debug.Log("here");
+           
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 StartCoroutine(HandleIt());
