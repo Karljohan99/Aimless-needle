@@ -35,6 +35,7 @@ public class LevelControl : MonoBehaviour
                 System.Threading.Thread.Sleep(500);
                 GameObject.Find("Player").transform.position = new Vector3(-2.2f, -14.8f, 0);
             }
+          
             else if (transform.name == "Door2")
             {
                 SceneManager.UnloadSceneAsync(SceneName);

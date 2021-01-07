@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cave 1.unity
     guid: f591378857583e8469629d3f6076afaf
+  - enabled: 1
+    path: Assets/Scenes/Tutorial Island.unity
+    guid: 3a27666cac287ba44be12e48762ce446
   m_configObjects: {}

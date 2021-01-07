@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene("Player Scene");
-        SceneManager.LoadScene("Grass Island", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Tutorial Island", LoadSceneMode.Additive);
     }
     public void QuitToDesktop()
     {
