@@ -13,12 +13,9 @@ public class TutorialManager : MonoBehaviour
     {
         if (popUpIndex == 0)
         {
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
             {
-
                 StartCoroutine(HandleIt());
-                
-
             }
 
         }
@@ -33,7 +30,7 @@ public class TutorialManager : MonoBehaviour
             }
         }
 
-        if (popUpIndex == 2)
+        if (popUpIndex == 2 || popUpIndex == 4)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -49,15 +46,6 @@ public class TutorialManager : MonoBehaviour
                 StartCoroutine(HandleIt());
             }
         }
-
-        if (popUpIndex == 4)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                StartCoroutine(HandleIt());
-                StartCoroutine(CandleIt());
-            }
-        }
         if (popUpIndex == 5)
         {
             if (Input.GetKeyDown(KeyCode.R))
@@ -68,6 +56,7 @@ public class TutorialManager : MonoBehaviour
 
         if (popUpIndex == 6)
         {
+            //Peale tutoriali läbimist script disabled
             this.enabled = false;
         }
 
