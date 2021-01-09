@@ -6368,7 +6368,7 @@ GameObject:
   - component: {fileID: 536333640}
   - component: {fileID: 536333639}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Door3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6386,7 +6386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3954a55d2c3ad9e4cb39af50135c958a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Mountain Island
+  SceneName: Small Island
 --- !u!58 &536333640
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8822,7 +8822,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8831,7 +8831,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8840,7 +8840,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8849,7 +8849,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8858,7 +8858,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8867,7 +8867,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8965,30 +8965,30 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 90dffbe40ef17c64d84dbc23ea956142, type: 2}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: -2798576976125609236, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -3845767279397372551, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 4372118159500938487, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -5908438491505210512, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
+    m_Data: {fileID: 3046148848719099710, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 8439559698156668588, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 3046148848719099710, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+    m_Data: {fileID: -5908438491505210512, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 4372118159500938487, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -3845767279397372551, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -2798576976125609236, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 2383449760391980497, guid: b8f82d562870c8c46abe5bd449a9d5d9, type: 3}
   - m_RefCount: 1
@@ -135705,7 +135705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3954a55d2c3ad9e4cb39af50135c958a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Mountain Island
+  SceneName: Small Island
 --- !u!114 &1051662047
 MonoBehaviour:
   m_ObjectHideFlags: 0

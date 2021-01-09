@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 202389366}
   - component: {fileID: 202389365}
   m_Layer: 0
-  m_Name: Door2
+  m_Name: Door4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3954a55d2c3ad9e4cb39af50135c958a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Cave 1
+  SceneName: Cave 2
 --- !u!58 &202389366
 CircleCollider2D:
   m_ObjectHideFlags: 0
