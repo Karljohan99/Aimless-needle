@@ -15,7 +15,6 @@ public class LevelControl : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -57,8 +56,14 @@ public class LevelControl : MonoBehaviour
                 SceneManager.LoadScene("Grass Island", LoadSceneMode.Additive);
                 System.Threading.Thread.Sleep(500);
                 GameObject.Find("Player").transform.position = new Vector3(-9, -27, 0);
-            } 
-            
+            }
+            else if (SceneName == "Tutorial Island")
+            {
+                SceneManager.UnloadSceneAsync(SceneName);
+                SceneManager.LoadScene("Grass Island", LoadSceneMode.Additive);
+                System.Threading.Thread.Sleep(500);
+                GameObject.Find("Player").transform.position = new Vector3(-9, -27, 0);
+            }
         }
     }
 }

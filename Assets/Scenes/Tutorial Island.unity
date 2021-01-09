@@ -129770,7 +129770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3954a55d2c3ad9e4cb39af50135c958a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Mountain Island
+  SceneName: Tutorial Island
 --- !u!114 &1051662047
 MonoBehaviour:
   m_ObjectHideFlags: 0
