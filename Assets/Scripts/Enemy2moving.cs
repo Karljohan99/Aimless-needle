@@ -10,7 +10,7 @@ public class Enemy2moving : MonoBehaviour
     public float min = 2f;
     public float max = 4f;
     private Vector3 previousPos;
-    public EnemyProjectile stone;
+    public EnemyProjectile projectile;
     public float StoneDelay;
     private float NextSpawnTime;
     public string moving;
@@ -24,6 +24,8 @@ public class Enemy2moving : MonoBehaviour
     //public AudioClip Footstep;
 
     private bool IsVisible;
+
+    public RectTransform Healthbar;
 
     //public AudioSource audioSource;
 
@@ -47,25 +49,26 @@ public class Enemy2moving : MonoBehaviour
     {
         previousPos = transform.position;
 
-        
+
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
         if (distanceFromPlayer < lineOfSite)
         {
-            
-            if (Time.time >= NextSpawnTime && stone != null)
+
+            if (Time.time >= NextSpawnTime && projectile != null)
             {
                 transform.GetComponent<AudioSource>().Play();
-                EnemyProjectile enemyprojectile = GameObject.Instantiate<EnemyProjectile>(stone, transform.position, Quaternion.identity, null);
+                EnemyProjectile enemyprojectile = GameObject.Instantiate<EnemyProjectile>(projectile, transform.position, Quaternion.identity, null);
                 NextSpawnTime += StoneDelay;
-                
+
             }
             else if (Time.time >= NextSpawnTime)
             {
                 NextSpawnTime += StoneDelay;
             }
 
-        } else { NextSpawnTime = Time.time; }
+        }
+        else { NextSpawnTime = Time.time; }
 
         if (moving == "circle")
         {
@@ -75,7 +78,8 @@ public class Enemy2moving : MonoBehaviour
             transform.position = _centre + offset;
 
 
-        } else if (moving == "line")
+        }
+        else if (moving == "line")
         {
             transform.position = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z);
 
@@ -84,10 +88,16 @@ public class Enemy2moving : MonoBehaviour
         if (previousPos.x - transform.position.x >= 0.01f)
         {
             transform.localScale = new Vector3(-System.Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            Healthbar.transform.localScale = new Vector3(-1f, 1f, 1f);
+            Healthbar.anchorMin = new Vector2(1, 0.5f);
+            Healthbar.anchorMax = new Vector2(1, 0.5f);
         }
         else if (previousPos.x - transform.position.x <= -0.01f)
         {
             transform.localScale = new Vector3(System.Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            Healthbar.transform.localScale = new Vector3(1f, 1f, 1f);
+            Healthbar.anchorMin = new Vector2(0, 0.5f);
+            Healthbar.anchorMax = new Vector2(0, 0.5f);
         }
 
 
