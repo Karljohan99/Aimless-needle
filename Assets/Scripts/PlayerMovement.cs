@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
             rigidBody.AddForce(transform.up * thrust);
         } else
         {
-            
             movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
             animator.SetFloat("Horizontal", movement.x);
