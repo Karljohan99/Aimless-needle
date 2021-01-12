@@ -11,25 +11,32 @@ public class EnemyHealth : MonoBehaviour
 
     public RectTransform Healthbar;
 
+    public EnemyGFX enemy;
+
     private float nextHit; 
 
     private float CurrentHealth;
 
-    public float EnemyDamage = 5;
-    public float Cooldown = 3;
-
-    private float nextHit2;
-
     void Start()
     {
         CurrentHealth = MaxHealth;
-        nextHit = Time.time;
     }
 
     
     void Update()
     {
         inventory = GameObject.FindGameObjectWithTag("Player")?.GetComponent<Inventory>();
+        if(enemy.aiPath.desiredVelocity.x >= 0.01f)
+        {
+            Healthbar.transform.localScale = new Vector3(1f, 1f, 1f);
+            Healthbar.anchorMin = new Vector2(0, 0.5f);
+            Healthbar.anchorMax = new Vector2(0, 0.5f);
+        } else if (enemy.aiPath.desiredVelocity.x <= -0.01f)
+        {
+            Healthbar.transform.localScale = new Vector3(-1f, 1f, 1f);
+            Healthbar.anchorMin = new Vector2(1, 0.5f);
+            Healthbar.anchorMax = new Vector2(1, 0.5f);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -37,19 +44,13 @@ public class EnemyHealth : MonoBehaviour
         if (collision.CompareTag("Player") && Input.GetKey(KeyCode.R))
         {
             Interactable weapon = getSelected();
-            if (Time.time > nextHit && weapon != null)
+            if (Time.time > nextHit)
             {
                 CurrentHealth -= weapon.damage;
                 Healthbar.sizeDelta = new Vector2(CurrentHealth/MaxHealth*100, Healthbar.sizeDelta.y);
                 nextHit = Time.time + weapon.cooldown;
                 if (CurrentHealth <= 0) Destroy(transform.parent.gameObject);
             }
-        }
-        Player player = collision.gameObject.GetComponent<Player>();
-        if (player != null && nextHit2 < Time.time)
-        {
-            Events.SetHealth(Events.RequestHealth() - EnemyDamage);
-            nextHit2 = Time.time + Cooldown;
         }
     }
 
