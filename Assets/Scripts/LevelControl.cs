@@ -25,7 +25,6 @@ public class LevelControl : MonoBehaviour
         if(collision.CompareTag("Player") && Input.GetKey(KeyCode.N))
         {
             int scene = SceneManager.GetActiveScene().buildIndex;
-            print(DelayTime);
 
             if (transform.name == "Door")
             {
