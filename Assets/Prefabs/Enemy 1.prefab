@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1534018787}
   m_Layer: 0
   m_Name: EnemyGFX
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,10 +113,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13eed20f4462c1d40b994d4a3505da37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 4
+  MaxHealth: 8
   Healthbar: {fileID: 703366029906394134}
   EnemyDamage: 5
   Cooldown: 3
+  drop: {fileID: 0}
+  Data: {fileID: 11400000, guid: 3d872d3b7649651468d413619d958784, type: 2}
 --- !u!1 &1107728019730610556
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +281,7 @@ MonoBehaviour:
   lineOfSite: 6.88
   min: 2
   max: 3
-  projectile: {fileID: 0}
+  projectile: {fileID: 3085741761693465407, guid: e3effa947a834ae4ebaeeed9b87fa4eb, type: 3}
   StoneDelay: 2
   moving: line
   Healthbar: {fileID: 703366029906394134}

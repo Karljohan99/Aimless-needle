@@ -10,16 +10,18 @@ public class EnemyProjectile : MonoBehaviour
     private Vector3 target;
     private Vector3 difference;
     private Vector3 to;
-    
+
+    private EnemyHealth e;
+
 
 
     void Awake()
     {
+        e = GameObject.FindGameObjectWithTag("Enemy")?.GetComponent<EnemyHealth>();
         player = GameObject.Find("Player");
         target = player.transform.position;
         difference = transform.position - target;
 
-        
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class EnemyProjectile : MonoBehaviour
 
         if (player != null)
         {
+            e.dam();
             Events.SetHealth(Events.RequestHealth() - damage);
             GameObject.Destroy(gameObject);
         }

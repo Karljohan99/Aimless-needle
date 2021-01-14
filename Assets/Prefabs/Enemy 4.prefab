@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1534018787}
   m_Layer: 0
   m_Name: EnemyGFX
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 3225832317793331946, guid: 272c35d4f8a9b6b4cad3135a728f93e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.34, y: 0.33}
@@ -113,10 +113,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13eed20f4462c1d40b994d4a3505da37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 4
+  MaxHealth: 12
   Healthbar: {fileID: 703366029906394134}
   EnemyDamage: 5
   Cooldown: 3
+  drop: {fileID: 0}
+  items: []
 --- !u!1 &1107728019730610556
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,9 +145,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107728019730610556}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -30.9, y: 7.57, z: 16.01591}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 377416608367472345}
   m_Father: {fileID: 0}
