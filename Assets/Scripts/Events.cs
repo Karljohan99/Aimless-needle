@@ -29,4 +29,7 @@ public static class Events
     public static event Action<bool> OnSetDig;
     public static void SetDig(bool value) => OnSetDig?.Invoke(value);
 
+    public static event Action OnLeaveIsland;
+    public static void LeaveIsland() => OnLeaveIsland?.Invoke();
+
 }

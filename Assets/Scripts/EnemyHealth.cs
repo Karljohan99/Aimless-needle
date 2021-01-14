@@ -83,20 +83,21 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (drop != null)
-        {
-            Instantiate(drop, transform.position, drop.transform.rotation);
-        } else
-        {
-            for (int i = 0; i < Data.Items.Length; i++)
+        if(this.enabled){
+            if (drop != null)
             {
-                if (Random.value <= Data.Probability[i])
+                Instantiate(drop, transform.position, drop.transform.rotation);
+            } else
+            {
+                for (int i = 0; i < Data.Items.Length; i++)
                 {
-                    Instantiate(Data.Items[i], transform.position, Quaternion.identity);
+                    if (Random.value <= Data.Probability[i])
+                    {
+                        Instantiate(Data.Items[i], transform.position, Quaternion.identity);
+                    }
                 }
             }
-        }
-        
+        }   
     }
 
     IEnumerator gotDamage()

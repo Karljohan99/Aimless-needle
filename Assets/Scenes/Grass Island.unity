@@ -58732,20 +58732,20 @@ Transform:
   m_Children:
   - {fileID: 1704832386}
   - {fileID: 131425692}
+  - {fileID: 1864899260}
   - {fileID: 1664438075}
+  - {fileID: 1671252877}
   - {fileID: 314867994}
+  - {fileID: 1929668551}
   - {fileID: 1248535148}
+  - {fileID: 1171042312}
   - {fileID: 628463379}
   - {fileID: 595301048}
+  - {fileID: 247100906}
   - {fileID: 2105730333}
   - {fileID: 463915468}
   - {fileID: 804229010}
   - {fileID: 33518292}
-  - {fileID: 1929668551}
-  - {fileID: 1864899260}
-  - {fileID: 1671252877}
-  - {fileID: 1171042312}
-  - {fileID: 247100906}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61617,7 +61617,6 @@ GameObject:
   - component: {fileID: 1556684498}
   - component: {fileID: 1556684497}
   - component: {fileID: 1556684496}
-  - component: {fileID: 1556684495}
   - component: {fileID: 1556684499}
   m_Layer: 0
   m_Name: Ship
@@ -61626,19 +61625,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1556684495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556684494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3954a55d2c3ad9e4cb39af50135c958a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: Grass Island
 --- !u!58 &1556684496
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -61738,6 +61724,8 @@ MonoBehaviour:
   CraftingTable: {fileID: 498723298}
   CraftingTableButton: {fileID: 1545121650}
   LeaveButton: {fileID: 1200494114}
+  LevelControl: {fileID: 0}
+  SceneName: Grass Island
 --- !u!4 &1570501359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4835138364229008372, guid: d40c18f53a5d7da4188dcd7d4e5755b4, type: 3}

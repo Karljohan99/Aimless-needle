@@ -6657,7 +6657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3954a55d2c3ad9e4cb39af50135c958a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Small Island
 --- !u!58 &536333640
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6673,7 +6672,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.06}
   serializedVersion: 2
-  m_Radius: 0.84
+  m_Radius: 0.7
 --- !u!212 &536333641
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -136001,17 +136000,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916113855}
-  m_LocalRotation: {x: 0, y: 0, z: -0.17020944, w: 0.98540795}
+  m_LocalRotation: {x: 0, y: 0, z: -0.22163348, w: 0.97513}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 948536927}
   m_Father: {fileID: 1312505352}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.6}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -25.61}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146, y: 47}
+  m_AnchoredPosition: {x: -125, y: 76}
   m_SizeDelta: {x: 260, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &916113857
@@ -136349,7 +136348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1181607858
 Transform:
   m_ObjectHideFlags: 0
@@ -136667,7 +136666,6 @@ GameObject:
   - component: {fileID: 1368709204}
   - component: {fileID: 1368709203}
   - component: {fileID: 1368709202}
-  - component: {fileID: 1368709201}
   - component: {fileID: 1368709200}
   m_Layer: 0
   m_Name: Ship
@@ -136692,18 +136690,7 @@ MonoBehaviour:
   CraftingTable: {fileID: 1304509019}
   CraftingTableButton: {fileID: 916113859}
   LeaveButton: {fileID: 1383824674}
---- !u!114 &1368709201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368709199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3954a55d2c3ad9e4cb39af50135c958a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  LevelControl: {fileID: 0}
   SceneName: Small Island
 --- !u!58 &1368709202
 CircleCollider2D:
@@ -136895,14 +136882,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383824673}
-  m_LocalRotation: {x: 0, y: 0, z: -0.17020944, w: 0.98540795}
+  m_LocalRotation: {x: 0, y: 0, z: -0.22163348, w: 0.97513}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 418604589}
   m_Father: {fileID: 1312505352}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.6}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -25.61}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 171, y: -64}
