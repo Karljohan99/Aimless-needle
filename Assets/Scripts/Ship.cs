@@ -11,17 +11,25 @@ public class Ship : MonoBehaviour
     public Button CraftingTableButton;
     public Button LeaveButton;
     public string SceneName;
+    public float ShipDelay = 60;
+
+    private float nextLeaveTime;
 
     void Start()
     {
         ShipCanvas.enabled = false;
         CraftingTableButton.onClick.AddListener(EnableCraftingTable);
         LeaveButton.onClick.AddListener(LeaveIsland);
+        if (Events.RequestSceneName() != "Tutorial Island")
+        {
+            LeaveButton.interactable = false;
+            nextLeaveTime = Time.time + ShipDelay;
+        }
     }
 
     void Update()
     {
-        
+        if (Time.time > nextLeaveTime) LeaveButton.interactable = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
