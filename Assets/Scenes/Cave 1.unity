@@ -259,7 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3954a55d2c3ad9e4cb39af50135c958a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Cave 1
 --- !u!58 &202389366
 CircleCollider2D:
   m_ObjectHideFlags: 0

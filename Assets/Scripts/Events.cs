@@ -29,7 +29,10 @@ public static class Events
     public static event Action<bool> OnSetDig;
     public static void SetDig(bool value) => OnSetDig?.Invoke(value);
 
-    public static event Action OnLeaveIsland;
-    public static void LeaveIsland() => OnLeaveIsland?.Invoke();
+    public static event Action<string> OnChangeScene;
+    public static void ChangeScene(string sceneName) => OnChangeScene?.Invoke(sceneName);
+
+    public static event Func<string> OnRequestSceneName;
+    public static string RequestSceneName() => OnRequestSceneName?.Invoke() ?? "";
 
 }

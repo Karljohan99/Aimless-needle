@@ -25,8 +25,8 @@ public class Tree : MonoBehaviour
         {
             Destroy(gameObject);
             axe.GetComponent<AudioSource>().Play();
-            Instantiate(dropItem, transform.position, Quaternion.identity);
-            
+            GameObject item = Instantiate(dropItem, transform.position, Quaternion.identity);
+            item.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
         }
     }
 

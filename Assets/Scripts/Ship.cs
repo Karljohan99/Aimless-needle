@@ -49,7 +49,6 @@ public class Ship : MonoBehaviour
 
     public void LeaveIsland()
     {
-        print(SceneName);
         if (SceneName == "Tutorial Island")
         {
             toGrassIsland();
@@ -78,7 +77,6 @@ public class Ship : MonoBehaviour
         var islands = new List<string>{ "Grass Island","Mountain Island","Small Island","Waterfall Island"};
         islands.Remove(SceneName);
         string island = islands[Random.Range(0, 3)];
-        print(island);
         switch(island)
         {
             case "Grass Island":
@@ -100,12 +98,14 @@ public class Ship : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(SceneName);
         SceneManager.LoadScene("Grass Island", LoadSceneMode.Additive);
+        Events.ChangeScene("Grass Island");
         GameObject.Find("Player").transform.position = new Vector3(-9, -27, 0);
     }
     public void toMountainIsland()
     {
         SceneManager.UnloadSceneAsync(SceneName);
         SceneManager.LoadScene("Mountain Island", LoadSceneMode.Additive);
+        Events.ChangeScene("Mountain Island");
         GameObject.Find("Player").transform.position = new Vector3(0, -12, 0);
     }
 
@@ -113,6 +113,7 @@ public class Ship : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(SceneName);
         SceneManager.LoadScene("Small Island", LoadSceneMode.Additive);
+        Events.ChangeScene("Small Island");
         GameObject.Find("Player").transform.position = new Vector3(-21, 0, 0);
     }
 
@@ -120,6 +121,7 @@ public class Ship : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(SceneName);
         SceneManager.LoadScene("Waterfall Island", LoadSceneMode.Additive);
+        Events.ChangeScene("Waterfall Island");
         GameObject.Find("Player").transform.position = new Vector3(-18, 10, 0);
     }
 }
