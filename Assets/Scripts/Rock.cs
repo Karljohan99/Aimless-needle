@@ -34,22 +34,34 @@ public class Rock : MonoBehaviour
             switch (currentSize) 
             {
                 case 1:
-                    Instantiate(Rock2, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-                    Instantiate(SmallRock, new Vector3(transform.position.x - 0.8f, transform.position.y + 0.8f, transform.position.z), Quaternion.identity);
-                    Instantiate(SmallRock, new Vector3(transform.position.x + 0.8f, transform.position.y + 1f, transform.position.z), Quaternion.identity);
-                    Instantiate(SmallRock, new Vector3(transform.position.x + 1.2f, transform.position.y - 0.8f, transform.position.z), Quaternion.identity);
-                    Instantiate(SmallRock, new Vector3(transform.position.x - 1.2f, transform.position.y - 0.8f, transform.position.z), Quaternion.identity);
+                    GameObject rock2 = Instantiate(Rock2, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                    rock2.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                    GameObject smallRock11 = Instantiate(SmallRock, new Vector3(transform.position.x - 0.8f, transform.position.y + 0.8f, transform.position.z), Quaternion.identity);
+                    smallRock11.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                    GameObject smallRock12 = Instantiate(SmallRock, new Vector3(transform.position.x + 0.8f, transform.position.y + 1f, transform.position.z), Quaternion.identity);
+                    smallRock12.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                    GameObject smallRock13 = Instantiate(SmallRock, new Vector3(transform.position.x + 1.2f, transform.position.y - 0.8f, transform.position.z), Quaternion.identity);
+                    smallRock13.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                    GameObject smallRock14 = Instantiate(SmallRock, new Vector3(transform.position.x - 1.2f, transform.position.y - 0.8f, transform.position.z), Quaternion.identity);
+                    smallRock14.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
                     break;
                 case 2:
-                    Instantiate(Rock3, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-                    Instantiate(SmallRock, new Vector3(transform.position.x - 0.6f, transform.position.y + 0.5f, transform.position.z), Quaternion.identity);
-                    Instantiate(SmallRock, new Vector3(transform.position.x + 0.7f, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
-                    Instantiate(SmallRock, new Vector3(transform.position.x - 0.7f, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
+                    GameObject rock3 = Instantiate(Rock3, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                    rock3.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                    GameObject smallRock21 = Instantiate(SmallRock, new Vector3(transform.position.x - 0.6f, transform.position.y + 0.5f, transform.position.z), Quaternion.identity);
+                    smallRock21.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                    GameObject smallRock22 = Instantiate(SmallRock, new Vector3(transform.position.x + 0.7f, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
+                    smallRock22.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                    GameObject smallRock23 = Instantiate(SmallRock, new Vector3(transform.position.x - 0.7f, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
+                    smallRock23.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
                     break;
                 case 3:
-                    Instantiate(SmallRock, new Vector3(transform.position.x, transform.position.y + 0.7f, transform.position.z), Quaternion.identity);
-                    Instantiate(SmallRock, new Vector3(transform.position.x + 0.5f, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
-                    Instantiate(SmallRock, new Vector3(transform.position.x - 0.5f, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
+                    GameObject smallRock31 = Instantiate(SmallRock, new Vector3(transform.position.x, transform.position.y + 0.7f, transform.position.z), Quaternion.identity);
+                    smallRock31.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                    GameObject smallRock32 = Instantiate(SmallRock, new Vector3(transform.position.x + 0.5f, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
+                    smallRock32.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                    GameObject smallRock33 = Instantiate(SmallRock, new Vector3(transform.position.x - 0.5f, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
+                    smallRock33.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
                     break;
             }
             

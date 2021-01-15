@@ -49,8 +49,9 @@ public class Slot : MonoBehaviour
     {
         Interactable dropItem = gameObject.transform.GetChild(1).GetComponent<InventoryButton>().dropItem;
         dropItem.GetComponent<SpriteRenderer>().sortingLayerName = "Behind player";
-        Instantiate(dropItem, GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
-        
+        Interactable item = Instantiate(dropItem, GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
+        item.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+
         inventory.count[i] -= 1;
         if (inventory.count[i] < 1)
         {

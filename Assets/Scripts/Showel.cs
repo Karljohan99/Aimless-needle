@@ -46,13 +46,15 @@ public class Showel : MonoBehaviour
         }
         if (nextTime < Time.time && canDig && isShovelSelected() && Input.GetKeyDown(KeyCode.R)) 
         {
-            Instantiate(Dirt, GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
+            GameObject dirt = Instantiate(Dirt, GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
+            dirt.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
             GetComponent<AudioSource>().Play();
             for (int i=0; i<Data.Items.Length; i++)
             {
                 if (Random.value <= Data.Probability[i])
                 {
-                    Instantiate(Data.Items[i], GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
+                    Interactable item = Instantiate(Data.Items[i], GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
+                    item.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
                 }
             }
             nextTime = Time.time + cooldown;

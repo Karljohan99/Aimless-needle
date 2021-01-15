@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 42285385}
   m_Layer: 0
   m_Name: Cave 3
-  m_TagString: Untagged
+  m_TagString: Cave 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2874,7 +2874,7 @@ GameObject:
   - component: {fileID: 286392352}
   m_Layer: 0
   m_Name: Waterfall Island
-  m_TagString: Untagged
+  m_TagString: Waterfall Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4882,7 +4882,7 @@ GameObject:
   - component: {fileID: 529081500}
   m_Layer: 0
   m_Name: Small Island
-  m_TagString: Untagged
+  m_TagString: Small Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5360,7 +5360,7 @@ GameObject:
   - component: {fileID: 646831147}
   m_Layer: 0
   m_Name: Cave 1
-  m_TagString: Untagged
+  m_TagString: Cave 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8259,7 +8259,7 @@ GameObject:
   - component: {fileID: 978643108}
   m_Layer: 0
   m_Name: Cave 2
-  m_TagString: Untagged
+  m_TagString: Cave 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10962,7 +10962,7 @@ GameObject:
   - component: {fileID: 1281081502}
   m_Layer: 0
   m_Name: Mountain Island
-  m_TagString: Untagged
+  m_TagString: Mountain Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12573,7 +12573,7 @@ GameObject:
   - component: {fileID: 1424742845}
   m_Layer: 0
   m_Name: Grass Island
-  m_TagString: Untagged
+  m_TagString: Grass Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14849,7 +14849,7 @@ GameObject:
   - component: {fileID: 1669393852}
   m_Layer: 0
   m_Name: Tutorial Island
-  m_TagString: Untagged
+  m_TagString: Tutorial Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

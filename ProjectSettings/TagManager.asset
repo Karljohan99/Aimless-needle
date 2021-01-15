@@ -15,6 +15,14 @@ TagManager:
   - Pear
   - Orange
   - Enemy
+  - Tutorial Island
+  - Grass Island
+  - Mountain Island
+  - Small Island
+  - Waterfall Island
+  - Cave 1
+  - Cave 2
+  - Cave 3
   layers:
   - Default
   - TransparentFX
