@@ -28,8 +28,8 @@ public class Enemy2moving : MonoBehaviour
     public RectTransform Healthbar;
 
     //public AudioSource audioSource;
-
-
+    
+    //public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +48,6 @@ public class Enemy2moving : MonoBehaviour
     void Update()
     {
         previousPos = transform.position;
-
 
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
@@ -82,7 +81,16 @@ public class Enemy2moving : MonoBehaviour
         else if (moving == "line")
         {
             transform.position = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z);
+            
+            previousPos = transform.position;
+            previousPos.x = Input.GetAxisRaw("Horizontal");
+            previousPos.y = Input.GetAxisRaw("Vertical");
 
+            
+            /*
+            animator.SetFloat("Horizontal", previousPos.x);
+            animator.SetFloat("Vertical", previousPos.y);
+            animator.SetFloat("Speed", previousPos.sqrMagnitude);*/
         }
 
         if (previousPos.x - transform.position.x >= 0.01f)

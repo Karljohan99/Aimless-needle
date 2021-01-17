@@ -152,6 +152,30 @@ TextureImporter:
   - first:
       213: 8975038791835066713
     second: rpgcritter update formatted transparent_49
+  - first:
+      213: 4425222571036848548
+    second: rpgcritter update formatted transparent_50
+  - first:
+      213: -2670265051616479436
+    second: rpgcritter update formatted transparent_51
+  - first:
+      213: -5741927391143519136
+    second: rpgcritter update formatted transparent_52
+  - first:
+      213: -5859203966512814797
+    second: rpgcritter update formatted transparent_53
+  - first:
+      213: -6633528807664312245
+    second: rpgcritter update formatted transparent_54
+  - first:
+      213: 7850608971541357723
+    second: rpgcritter update formatted transparent_55
+  - first:
+      213: -1663188852580008920
+    second: rpgcritter update formatted transparent_56
+  - first:
+      213: -8488415568055265478
+    second: rpgcritter update formatted transparent_57
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -243,9 +267,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 63
+        y: 128
         width: 63
-        height: 129
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -768,9 +792,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
+        y: 128
         width: 31
-        height: 76
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -936,9 +960,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 208
-        y: 102
-        width: 32
-        height: 25
+        y: 107
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1061,9 +1085,9 @@ TextureImporter:
       name: rpgcritter update formatted transparent_39
       rect:
         serializedVersion: 2
-        x: 192
+        x: 208
         y: 73
-        width: 32
+        width: 16
         height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1284,6 +1308,174 @@ TextureImporter:
       bones: []
       spriteID: 9512ea8ba3ebd8c70800000000000000
       internalID: 8975038791835066713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpgcritter update formatted transparent_50
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 97
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a131b68b7c896d30800000000000000
+      internalID: 4425222571036848548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpgcritter update formatted transparent_51
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 96
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437724e451051fad0800000000000000
+      internalID: -2670265051616479436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpgcritter update formatted transparent_52
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 64
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c1ec4b5739050b0800000000000000
+      internalID: -5741927391143519136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpgcritter update formatted transparent_53
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335a17d290defaea0800000000000000
+      internalID: -5859203966512814797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpgcritter update formatted transparent_54
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 96
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4029d302b8f0f3a0800000000000000
+      internalID: -6633528807664312245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpgcritter update formatted transparent_55
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 64
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94a73be347f2fc60800000000000000
+      internalID: 7850608971541357723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpgcritter update formatted transparent_56
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 102
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c349fec8a2be8e0800000000000000
+      internalID: -1663188852580008920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpgcritter update formatted transparent_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 73
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a379b20b307133a80800000000000000
+      internalID: -8488415568055265478
       vertices: []
       indices: 
       edges: []
