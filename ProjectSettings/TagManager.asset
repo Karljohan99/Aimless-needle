@@ -23,6 +23,14 @@ TagManager:
   - Cave 1
   - Cave 2
   - Cave 3
+  - Palm Island
+  - Cave 4
+  - Compass
+  - Compass1
+  - Compass2
+  - Compass3
+  - Compass4
+  - Compass5
   layers:
   - Default
   - TransparentFX

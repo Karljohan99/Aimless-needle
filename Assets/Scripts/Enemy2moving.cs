@@ -54,7 +54,7 @@ public class Enemy2moving : MonoBehaviour
         if (distanceFromPlayer < lineOfSite)
         {
 
-            if (Time.time >= NextSpawnTime && projectile != null)
+            if (Time.time >= NextSpawnTime && projectile != null && GameObject.Find("Player") != null)
             {
                 transform.GetComponent<AudioSource>().Play();
                 EnemyProjectile enemyprojectile = GameObject.Instantiate<EnemyProjectile>(projectile, transform.position, Quaternion.identity, null);

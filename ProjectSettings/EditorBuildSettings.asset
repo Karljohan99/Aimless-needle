@@ -24,8 +24,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Small Island.unity
     guid: 6e79bc67dc0440d48b1892915522043a
   - enabled: 1
-    path: Assets/Scenes/Waterfall Island.unity
+    path: Assets/Scenes/Waterfall island.unity
     guid: 877d6daca905dfc4a991a4c81b14ebda
+  - enabled: 1
+    path: Assets/Scenes/Palm Island.unity
+    guid: 32a0552a1f5855345a0b94f2f1d94e8e
   - enabled: 1
     path: Assets/Scenes/Cave 1.unity
     guid: f591378857583e8469629d3f6076afaf
@@ -35,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cave 3.unity
     guid: c1fbff87c82b17c48b1f38881aee3028
+  - enabled: 1
+    path: Assets/Scenes/Cave 4.unity
+    guid: 79c2c0062960dd249a7940e448041f28
   m_configObjects: {}

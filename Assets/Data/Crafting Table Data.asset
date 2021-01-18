@@ -31,3 +31,19 @@ MonoBehaviour:
     - Amount: 1
       Item: {fileID: 11400000, guid: 5f71d0d5e13915f4b80a1587b02b0d13, type: 2}
     TargetItem: {fileID: 11400000, guid: 5e91ce29d55b111479144456a3be9025, type: 2}
+  - Ingredients:
+    - Amount: 1
+      Item: {fileID: 11400000, guid: 854785110da7af449851c65a1fc3432e, type: 2}
+    - Amount: 1
+      Item: {fileID: 11400000, guid: 9f87e774c7296d4428d5d6ea4595c73c, type: 2}
+    - Amount: 1
+      Item: {fileID: 11400000, guid: 126ac0e74105a0d4ca6ca577aaef0537, type: 2}
+    TargetItem: {fileID: 11400000, guid: a9e27b34f431cb1458240bdb2285a009, type: 2}
+  - Ingredients:
+    - Amount: 1
+      Item: {fileID: 11400000, guid: a9e27b34f431cb1458240bdb2285a009, type: 2}
+    - Amount: 1
+      Item: {fileID: 11400000, guid: 31714a77ad57f6d4b8bca26528e218f9, type: 2}
+    - Amount: 1
+      Item: {fileID: 11400000, guid: 126ac0e74105a0d4ca6ca577aaef0537, type: 2}
+    TargetItem: {fileID: 11400000, guid: 28cdf16cc0f117441a24994b5182ff95, type: 2}

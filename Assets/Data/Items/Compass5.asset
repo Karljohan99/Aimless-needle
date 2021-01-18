@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1853f844ff7d45d45a4dc51335249156, type: 3}
+  m_Name: Compass5
+  m_EditorClassIdentifier: 
+  ItemButton: {fileID: 3817486466191106891, guid: 9a300a5c381f54c41919827ccce8de84, type: 3}
+  MaxStack: 10
+  Damage: 0
+  Cooldown: 1
+  Tag: Compass5
+  Sprite: {fileID: 1821157404520235930, guid: 28480cfd0ed665e4fa20ccefdf728183, type: 3}

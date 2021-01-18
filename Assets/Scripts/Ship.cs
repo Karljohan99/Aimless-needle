@@ -14,13 +14,14 @@ public class Ship : MonoBehaviour
     public float ShipDelay = 60;
 
     private float nextLeaveTime;
+    private Inventory inventory;
 
     void Start()
     {
         ShipCanvas.enabled = false;
         CraftingTableButton.onClick.AddListener(EnableCraftingTable);
         LeaveButton.onClick.AddListener(LeaveIsland);
-        if (Events.RequestSceneName() != "Tutorial Island")
+        if (Events.RequestSceneName() != "Tutorial Island" && checkPlayer())
         {
             LeaveButton.interactable = false;
             nextLeaveTime = Time.time + ShipDelay;
@@ -57,6 +58,12 @@ public class Ship : MonoBehaviour
 
     public void LeaveIsland()
     {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        foreach (Slot slot in inventory.slots) 
+        {
+            if (slot.tag == "Compass") Events.WinLevel();
+        }
+        
         if (SceneName == "Tutorial Island")
         {
             toGrassIsland();
@@ -77,14 +84,18 @@ public class Ship : MonoBehaviour
         {
             pickRandom();
         }
+        else if (SceneName == "Palm Island") 
+        {
+            pickRandom();
+        }
     }
     
 
     public void pickRandom()
     {
-        var islands = new List<string>{ "Grass Island","Mountain Island","Small Island","Waterfall Island"};
+        var islands = new List<string>{ "Grass Island","Mountain Island","Small Island","Waterfall Island", "Palm Island"};
         islands.Remove(SceneName);
-        string island = islands[Random.Range(0, 3)];
+        string island = islands[Random.Range(0, 4)];
         switch(island)
         {
             case "Grass Island":
@@ -98,6 +109,9 @@ public class Ship : MonoBehaviour
                 break;
             case "Waterfall Island":
                 toWaterfallIsland();
+                break;
+            case "Palm Island":
+                toPalmIsland();
                 break;
         }
     }
@@ -131,5 +145,37 @@ public class Ship : MonoBehaviour
         SceneManager.LoadScene("Waterfall Island", LoadSceneMode.Additive);
         Events.ChangeScene("Waterfall Island");
         GameObject.Find("Player").transform.position = new Vector3(-18, 10, 0);
+    }
+
+    public void toPalmIsland()
+    {
+        SceneManager.UnloadSceneAsync(SceneName);
+        SceneManager.LoadScene("Palm Island", LoadSceneMode.Additive);
+        Events.ChangeScene("Palm Island");
+        GameObject.Find("Player").transform.position = new Vector3(-20, 6, 0);
+    }
+
+    private bool checkPlayer() 
+    {
+        bool b = false;
+        switch(Events.RequestSceneName())
+        {
+        case "Grass Island":
+            if (GameObject.Find("Player").transform.position == new Vector3(-9, -27, 0))   b = true;
+            break;
+        case "Mountain Island":
+            if (GameObject.Find("Player").transform.position == new Vector3(0, -12, 0)) b =  true;;
+            break;
+        case "Small Island":
+            if (GameObject.Find("Player").transform.position == new Vector3(-21, 0, 0)) b =  true;
+            break;
+        case "Waterfall Island":
+            if (GameObject.Find("Player").transform.position == new Vector3(-18, 10, 0)) b =  true;
+            break;
+        case "Palm Island":
+            if (GameObject.Find("Player").transform.position == new Vector3(-20, 6, 0)) b =  true;
+            break;
+        }
+        return b;
     }
 }

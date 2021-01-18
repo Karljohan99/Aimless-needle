@@ -61,6 +61,7 @@ public class Interactable : MonoBehaviour
 
     public int IsStackable()
     {
+        if (inventory == null) inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.slots[i].CompareTag(gameObject.tag) == true)

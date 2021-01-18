@@ -86,6 +86,7 @@ public class EnemyHealth : MonoBehaviour
         if(this.enabled){
             if (drop != null)
             {
+                // Errori kaotamiseks see peaks olema kohas, kus vaadatakse, et enemy helath on null ja kutsutakse Destroy(gameObject) 
                 Instantiate(drop, transform.position, drop.transform.rotation);
             } else
             {

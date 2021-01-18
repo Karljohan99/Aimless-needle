@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Text.RegularExpressions;
 
 public class Player : MonoBehaviour
 {
@@ -31,8 +32,6 @@ public class Player : MonoBehaviour
         Events.OnSetHealth += SetHealth;
         Events.OnRequestHealth += RequestHealth;
         Events.OnDie += Die;
-
-        
 
     }
 
@@ -79,13 +78,19 @@ public class Player : MonoBehaviour
             Slot slot = inventory.slots[i];
             for (int j=0; j<inventory.count[i]; j++)
             {
-                slot.DropItem();
+                var match = Regex.Match(slot.tag, @"^Compass\d?$");
+                if (match.Success)
+                {
+                    slot.DropItem();
+                }
+                else 
+                {
+                    slot.RemoveItem(i);
+                }
             }
         }
         losePanel.SetActive(true);
         gameObject.SetActive(false);
-        //transform.position = new Vector3(-9, -27, 0);
-        //Events.SetHealth(100);
     }
 
     public void PlayFootstep()
