@@ -43,7 +43,7 @@ public class EnemyProjectile : MonoBehaviour
 
         if (player != null)
         {
-            e.dam();
+            player.GotDamage();
             Events.SetHealth(Events.RequestHealth() - damage);
             GameObject.Destroy(gameObject);
         }

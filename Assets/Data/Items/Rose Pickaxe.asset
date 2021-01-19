@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1853f844ff7d45d45a4dc51335249156, type: 3}
+  m_Name: Rose Pickaxe
+  m_EditorClassIdentifier: 
+  ItemButton: {fileID: 8531474852123302401, guid: afb1cb543b9370347adba8f14e8e1467, type: 3}
+  MaxStack: 1
+  Damage: 5
+  Cooldown: 0.5
+  Tag: Rose Pickaxe
+  Sprite: {fileID: 21300000, guid: 3bdb51fbe375c824e807bb86093a6a97, type: 3}

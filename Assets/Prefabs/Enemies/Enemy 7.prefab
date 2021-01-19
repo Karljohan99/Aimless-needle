@@ -118,7 +118,7 @@ MonoBehaviour:
   EnemyDamage: 5
   Cooldown: 3
   drop: {fileID: 0}
-  items: []
+  Data: {fileID: 11400000, guid: 3d872d3b7649651468d413619d958784, type: 2}
 --- !u!1 &1107728019730610556
 GameObject:
   m_ObjectHideFlags: 0

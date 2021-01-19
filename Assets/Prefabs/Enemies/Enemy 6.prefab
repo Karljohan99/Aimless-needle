@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: -1133281645
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2768019698504071070, guid: 05c84f4b163033444984af823f7afd0b, type: 3}
+  m_Sprite: {fileID: 8749302817991680212, guid: f1217fab21aa1ad4790da8cd593b5ff5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.17}
+  m_Size: {x: 0.34, y: 0.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -113,12 +113,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13eed20f4462c1d40b994d4a3505da37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 20
+  MaxHealth: 10
   Healthbar: {fileID: 703366029906394134}
   EnemyDamage: 5
   Cooldown: 3
   drop: {fileID: 0}
-  items: []
+  Data: {fileID: 11400000, guid: 3d872d3b7649651468d413619d958784, type: 2}
 --- !u!1 &1107728019730610556
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 2231367326478011498}
   - component: {fileID: 1774694624914737948}
   m_Layer: 0
-  m_Name: Enemy 8
+  m_Name: Enemy 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,9 +145,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107728019730610556}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -30.9, y: 7.57, z: 16.01591}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 377416608367472345}
   m_Father: {fileID: 0}

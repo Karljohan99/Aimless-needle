@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     private float health;
     private Inventory inventory;
 
+    private SpriteRenderer sprite;
+
 
     private void Awake()
     {            
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
         Events.OnSetHealth += SetHealth;
         Events.OnRequestHealth += RequestHealth;
         Events.OnDie += Die;
+        sprite = GetComponent<SpriteRenderer>();
 
     }
 
@@ -96,5 +99,29 @@ public class Player : MonoBehaviour
     public void PlayFootstep()
     {
         GetComponent<AudioSource>().PlayOneShot(Footstep);
+    }
+
+    IEnumerator Blinking()
+    {
+        sprite.color = new Color(1, 0, 0, 1);
+        yield return new WaitForSeconds(0.07f);
+        sprite.color = new Color(1, 1, 1, 1);
+        yield return new WaitForSeconds(0.07f);
+        sprite.color = new Color(1, 0, 0, 1);
+        yield return new WaitForSeconds(0.07f);
+        sprite.color = new Color(1, 1, 1, 1);
+        yield return new WaitForSeconds(0.07f);
+        sprite.color = new Color(1, 0, 0, 1);
+        yield return new WaitForSeconds(0.07f);
+        sprite.color = new Color(1, 1, 1, 1);
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = new Color(1, 0, 0, 1);
+        yield return new WaitForSeconds(0.07f);
+        sprite.color = new Color(1, 1, 1, 1);
+    }
+
+    public void GotDamage()
+    {
+        StartCoroutine(Blinking());
     }
 }

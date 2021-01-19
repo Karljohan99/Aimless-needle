@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1853f844ff7d45d45a4dc51335249156, type: 3}
+  m_Name: Blue Pickaxe
+  m_EditorClassIdentifier: 
+  ItemButton: {fileID: 8531474852123302401, guid: 37d2e0b5e070ffd4f96246e9fe7c1583, type: 3}
+  MaxStack: 1
+  Damage: 3
+  Cooldown: 0.8
+  Tag: Blue Pickaxe
+  Sprite: {fileID: 21300000, guid: 52c50a5aecc914a43864724c15ac1e0a, type: 3}

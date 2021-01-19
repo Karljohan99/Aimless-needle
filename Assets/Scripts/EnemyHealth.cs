@@ -20,7 +20,6 @@ public class EnemyHealth : MonoBehaviour
     public float Cooldown = 3;
 
     private SpriteRenderer sprite;
-    private SpriteRenderer pSprite;
 
     private float nextHit2;
 
@@ -33,7 +32,6 @@ public class EnemyHealth : MonoBehaviour
         CurrentHealth = MaxHealth;
         nextHit = Time.time;
         sprite = GetComponent<SpriteRenderer>();
-        pSprite = GameObject.FindGameObjectWithTag("Player")?.GetComponent<SpriteRenderer>();
     }
 
 
@@ -64,7 +62,7 @@ public class EnemyHealth : MonoBehaviour
         if (player != null && nextHit2 < Time.time)
         {
             Events.SetHealth(Events.RequestHealth() - EnemyDamage);
-            StartCoroutine(playerGotDamage());
+            player.GotDamage();
             nextHit2 = Time.time + Cooldown;
         }
     }
@@ -121,30 +119,4 @@ public class EnemyHealth : MonoBehaviour
 
     }
 
-    IEnumerator playerGotDamage()
-    {
-        pSprite.color = new Color(1, 0, 0, 1);
-        yield return new WaitForSeconds(0.07f);
-        pSprite.color = new Color(1, 1, 1, 1);
-        yield return new WaitForSeconds(0.07f);
-        pSprite.color = new Color(1, 0, 0, 1);
-        yield return new WaitForSeconds(0.07f);
-        pSprite.color = new Color(1, 1, 1, 1);
-        yield return new WaitForSeconds(0.07f);
-        pSprite.color = new Color(1, 0, 0, 1);
-        yield return new WaitForSeconds(0.07f);
-        pSprite.color = new Color(1, 1, 1, 1);
-        yield return new WaitForSeconds(0.07f);
-        pSprite.color = new Color(1, 0, 0, 1);
-        yield return new WaitForSeconds(0.07f);
-        pSprite.color = new Color(1, 1, 1, 1);
-        
-       
-
-    }
-
-    public void dam()
-    {
-        StartCoroutine(playerGotDamage());
-    }
 }
