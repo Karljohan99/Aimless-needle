@@ -31,6 +31,19 @@ TagManager:
   - Compass3
   - Compass4
   - Compass5
+  - Blue Crystal
+  - Rose Crystal
+  - Steel
+  - Blue Axe
+  - Blue Pickaxe
+  - Blue Shovel
+  - Rose Axe
+  - Rose Pickaxe
+  - Rose Shovel
+  - Steel Axe
+  - Steel Pickaxe
+  - Steel Shovel
+  - Player Projectile
   layers:
   - Default
   - TransparentFX

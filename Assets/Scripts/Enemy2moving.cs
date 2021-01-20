@@ -58,6 +58,7 @@ public class Enemy2moving : MonoBehaviour
             {
                 transform.GetComponent<AudioSource>().Play();
                 EnemyProjectile enemyprojectile = GameObject.Instantiate<EnemyProjectile>(projectile, transform.position, Quaternion.identity, null);
+                enemyprojectile.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
                 NextSpawnTime += StoneDelay;
 
             }

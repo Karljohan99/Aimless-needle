@@ -100,7 +100,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.32619363
+  m_Radius: 0.2530678
 --- !u!114 &1534018787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +287,6 @@ MonoBehaviour:
   StoneDelay: 2
   moving: line
   Healthbar: {fileID: 703366029906394134}
-  animator: {fileID: 2569050857866455436}
 --- !u!95 &2569050857866455436
 Animator:
   serializedVersion: 3

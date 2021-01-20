@@ -42,7 +42,20 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && Input.GetKey(KeyCode.R))
+        if(collision.CompareTag("Player Projectile"))
+        {
+            GameObject projectile = collision.gameObject;
+            CurrentHealth -= 5;
+            StartCoroutine(gotDamage());
+            Healthbar.sizeDelta = new Vector2(CurrentHealth / MaxHealth * 100, Healthbar.sizeDelta.y);
+            if (CurrentHealth <= 0)
+            {
+
+                Destroy(transform.parent.gameObject);
+            }
+            Destroy(projectile);
+        }
+        if (collision.CompareTag("Player") && (Input.GetKey(KeyCode.R) || Input.GetMouseButtonDown(0)))
         {
             Interactable weapon = getSelected();
             if (Time.time > nextHit && weapon != null)
@@ -84,8 +97,9 @@ public class EnemyHealth : MonoBehaviour
         if(this.enabled){
             if (drop != null)
             {
-                // Errori kaotamiseks see peaks olema kohas, kus vaadatakse, et enemy helath on null ja kutsutakse Destroy(gameObject) 
+                
                 Instantiate(drop, transform.position, drop.transform.rotation);
+                drop.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
             } else
             {
                 for (int i = 0; i < Data.Items.Length; i++)
@@ -93,6 +107,7 @@ public class EnemyHealth : MonoBehaviour
                     if (Random.value <= Data.Probability[i])
                     {
                         Instantiate(Data.Items[i], transform.position, Quaternion.identity);
+                        Data.Items[i].transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
                     }
                 }
             }
@@ -119,4 +134,5 @@ public class EnemyHealth : MonoBehaviour
 
     }
 
+    
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7259743574244962699}
   m_Layer: 8
   m_Name: Steel
-  m_TagString: Compass3
+  m_TagString: Steel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

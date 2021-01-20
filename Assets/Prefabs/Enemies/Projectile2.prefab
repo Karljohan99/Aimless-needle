@@ -10,7 +10,15 @@ PrefabInstance:
     - target: {fileID: 655179714471084580, guid: e3effa947a834ae4ebaeeed9b87fa4eb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7701642256934125471, guid: 8ad835b6ee44a8f4bbc656e93f062e4c, type: 3}
+      objectReference: {fileID: 7701642256934125471, guid: 05c84f4b163033444984af823f7afd0b, type: 3}
+    - target: {fileID: 655179714471084580, guid: e3effa947a834ae4ebaeeed9b87fa4eb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 655179714471084580, guid: e3effa947a834ae4ebaeeed9b87fa4eb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.21
+      objectReference: {fileID: 0}
     - target: {fileID: 1300504792973818285, guid: e3effa947a834ae4ebaeeed9b87fa4eb, type: 3}
       propertyPath: m_Name
       value: Projectile2

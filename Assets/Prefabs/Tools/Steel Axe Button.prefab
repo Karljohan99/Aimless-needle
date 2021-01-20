@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: -4179561909459939370}
   - component: {fileID: 987582959638518731}
   m_Layer: 5
-  m_Name: Iron Axe Button
-  m_TagString: Stone Axe
+  m_Name: Steel Axe Button
+  m_TagString: Steel Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

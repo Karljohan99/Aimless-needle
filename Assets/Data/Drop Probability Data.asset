@@ -14,5 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
   - {fileID: 6042215813101150643, guid: 3b7fa992cde27574b8686ba46dcdd88a, type: 3}
+  - {fileID: 7259743574244962698, guid: 6ae75945ffaa3004c9a588c5c01bc611, type: 3}
+  - {fileID: 7361891605212315339, guid: 506b733c88f3d804abc974a60a60e84f, type: 3}
+  - {fileID: 7259743574244962698, guid: 222b6e0b600a11a4cb97ea49b55b61cd, type: 3}
+  - {fileID: 7259743574244962698, guid: 12505fcb83f9f984b8c4531e1a387da7, type: 3}
+  - {fileID: 7445100378904392928, guid: ec93485ac1527fd499bfed05cc871709, type: 3}
+  - {fileID: 7445100378904392928, guid: 2b98804b86208d94aa7c63c95af2c55c, type: 3}
+  - {fileID: 7445100378904392928, guid: 815601ef0ead8124b9d91a8c34be6c33, type: 3}
+  - {fileID: 7445100378904392928, guid: 527371e521d49ac46958b064e04e1c3b, type: 3}
+  - {fileID: 7445100378904392928, guid: 9f9cdb9aa51ad644a9be396fdc91c495, type: 3}
+  - {fileID: 6042215813101150643, guid: 2be9c818079b95d43a1a9572a6048359, type: 3}
+  - {fileID: 6042215813101150643, guid: 61629d0cc988d4546ac921cb2ecb8a72, type: 3}
+  - {fileID: 6042215813101150643, guid: ca51575aae30c7e4a9543d83c5eea406, type: 3}
+  - {fileID: 7445100378904392928, guid: 5785c095f6872864ba0500b080a7baf9, type: 3}
+  - {fileID: 7445100378904392928, guid: 445b531c8a203284987aa0c5bf0e411a, type: 3}
+  - {fileID: 7259743574244962698, guid: e150efb5c77ce314d8fc79aae629d8e3, type: 3}
   Probability:
-  - 1
+  - 0.1
+  - 0.1
+  - 0.1
+  - 0.05
+  - 0.05
+  - 0.02
+  - 0.02
+  - 0.02
+  - 0.001
+  - 0.001
+  - 0.1
+  - 0.1
+  - 0.1
+  - 0.005
+  - 0.005
+  - 0.05

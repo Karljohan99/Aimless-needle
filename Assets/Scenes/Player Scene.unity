@@ -2384,6 +2384,7 @@ GameObject:
   - component: {fileID: 225951176}
   - component: {fileID: 225951175}
   - component: {fileID: 225951184}
+  - component: {fileID: 225951185}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2681,6 +2682,20 @@ MonoBehaviour:
   - {fileID: 817291238}
   - {fileID: 825327471}
   popUpIndex: 0
+--- !u!114 &225951185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225951174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acba7d9e9bac4048abb72659946086f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  projectile: {fileID: 8972226912955692899, guid: e2f0c6dcb9ec0754e82459fc46c5b133, type: 3}
 --- !u!1001 &233968703
 PrefabInstance:
   m_ObjectHideFlags: 0
