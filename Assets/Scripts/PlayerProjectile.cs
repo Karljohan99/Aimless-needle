@@ -11,34 +11,39 @@ public class PlayerProjectile : MonoBehaviour
 
     public GameObject drop;
 
+    private bool dropped = false;
+
 
 
     private void Awake()
     {
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log(target);
         difference = transform.position - target;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        to = transform.position - difference;
     }
 
     // Update is called once per frame
     void Update()
     {
-        to = transform.position - difference;
+        
         float step = Speed * Time.deltaTime;
+        
+        if (Vector3.Distance(transform.position, to) < 0.5f && !dropped)
+        {
+            GameObject item = Instantiate(drop, transform.position, drop.transform.rotation);
+            item.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+            dropped = true;
+        }
+
+
         transform.position = Vector3.MoveTowards(transform.position, to, step);
 
     }
 
-    private void OnDestroy()
-    {
-       
-        Instantiate(drop, transform.position, drop.transform.rotation);
-        drop.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
-    }
+   
 }

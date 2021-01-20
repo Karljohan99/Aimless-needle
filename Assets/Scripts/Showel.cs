@@ -44,7 +44,7 @@ public class Showel : MonoBehaviour
             canDig = true;
             nextCheckTime = Time.time + checkDelay;
         }
-        if (nextTime < Time.time && canDig && isShovelSelected() && Input.GetKeyDown(KeyCode.R)) 
+        if (nextTime < Time.time && canDig && isShovelSelected() && Input.GetKeyDown(KeyCode.Space)) 
         {
             GameObject dirt = Instantiate(Dirt, GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
             dirt.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);

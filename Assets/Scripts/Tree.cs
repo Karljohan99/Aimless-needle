@@ -21,7 +21,7 @@ public class Tree : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         InventoryButton axe = isAxeSelected();
-        if (collision.CompareTag("Player") && axe != null && Input.GetKey(KeyCode.R))
+        if (collision.CompareTag("Player") && axe != null && Input.GetKey(KeyCode.Space))
         {
             Destroy(gameObject);
             axe.GetComponent<AudioSource>().Play();

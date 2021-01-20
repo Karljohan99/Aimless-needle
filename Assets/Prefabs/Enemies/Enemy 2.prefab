@@ -67,6 +67,7 @@ MonoBehaviour:
   Cooldown: 3
   drop: {fileID: 0}
   Data: {fileID: 11400000, guid: 3d872d3b7649651468d413619d958784, type: 2}
+  stone: {fileID: 7259743574244962740, guid: 6ae75945ffaa3004c9a588c5c01bc611, type: 3}
 --- !u!1 &1107728019730610556
 GameObject:
   m_ObjectHideFlags: 0

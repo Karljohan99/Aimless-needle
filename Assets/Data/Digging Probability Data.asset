@@ -18,9 +18,15 @@ MonoBehaviour:
   - {fileID: 7445100378904392928, guid: 815601ef0ead8124b9d91a8c34be6c33, type: 3}
   - {fileID: 7445100378904392928, guid: 2b98804b86208d94aa7c63c95af2c55c, type: 3}
   - {fileID: 7445100378904392928, guid: ec93485ac1527fd499bfed05cc871709, type: 3}
+  - {fileID: 7259743574244962698, guid: 222b6e0b600a11a4cb97ea49b55b61cd, type: 3}
+  - {fileID: 7259743574244962698, guid: 12505fcb83f9f984b8c4531e1a387da7, type: 3}
+  - {fileID: 7259743574244962698, guid: e150efb5c77ce314d8fc79aae629d8e3, type: 3}
   Probability:
   - 0.1
   - 0.05
+  - 0.01
+  - 0.01
+  - 0.01
   - 0.01
   - 0.01
   - 0.01

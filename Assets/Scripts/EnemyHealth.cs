@@ -26,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject drop;
 
     public DropProbabilityData Data;
+    public GameObject stone;
 
     void Start()
     {
@@ -53,9 +54,12 @@ public class EnemyHealth : MonoBehaviour
 
                 Destroy(transform.parent.gameObject);
             }
+
+            GameObject item = Instantiate(stone, transform.position, stone.transform.rotation);
+            item.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
             Destroy(projectile);
         }
-        if (collision.CompareTag("Player") && (Input.GetKey(KeyCode.R) || Input.GetMouseButtonDown(0)))
+        if (collision.CompareTag("Player") && (Input.GetKey(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
             Interactable weapon = getSelected();
             if (Time.time > nextHit && weapon != null)
@@ -66,7 +70,23 @@ public class EnemyHealth : MonoBehaviour
                 nextHit = Time.time + weapon.cooldown;
                 if (CurrentHealth <= 0)
                 {
+                    if (drop != null)
+                    {
 
+                        GameObject item = Instantiate(drop, transform.position, drop.transform.rotation);
+                        item.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                    }
+                    else
+                    {
+                        for (int i = 0; i < Data.Items.Length; i++)
+                        {
+                            if (Random.value <= Data.Probability[i])
+                            {
+                                Interactable item = Instantiate(Data.Items[i], transform.position, Quaternion.identity);
+                                item.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                            }
+                        }
+                    }
                     Destroy(transform.parent.gameObject);
                 }
             }
@@ -92,27 +112,7 @@ public class EnemyHealth : MonoBehaviour
         return null;
     }
 
-    private void OnDestroy()
-    {
-        if(this.enabled){
-            if (drop != null)
-            {
-                
-                Instantiate(drop, transform.position, drop.transform.rotation);
-                drop.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
-            } else
-            {
-                for (int i = 0; i < Data.Items.Length; i++)
-                {
-                    if (Random.value <= Data.Probability[i])
-                    {
-                        Instantiate(Data.Items[i], transform.position, Quaternion.identity);
-                        Data.Items[i].transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
-                    }
-                }
-            }
-        }   
-    }
+    
 
     IEnumerator gotDamage()
     {
