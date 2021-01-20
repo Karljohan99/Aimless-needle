@@ -105,6 +105,7 @@ public class CraftingCardPresenter : MonoBehaviour
 
     public void CraftItem()
     {
+        GetComponent<AudioSource>().Play();
         foreach (CraftingIngredientData ingredient in Data.Panels[index].Ingredients) 
         {
             int i = tags.IndexOf(ingredient.Item.Tag);

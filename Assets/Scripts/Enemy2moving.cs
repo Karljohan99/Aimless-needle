@@ -14,6 +14,7 @@ public class Enemy2moving : MonoBehaviour
     public float StoneDelay;
     private float NextSpawnTime;
     public string moving;
+    public Animator animator;
 
     private float RotateSpeed = 2.6f;
     private float Radius = 1.2f;
@@ -81,17 +82,16 @@ public class Enemy2moving : MonoBehaviour
         }
         else if (moving == "line")
         {
-            transform.position = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z);
-            
             previousPos = transform.position;
-            previousPos.x = Input.GetAxisRaw("Horizontal");
-            previousPos.y = Input.GetAxisRaw("Vertical");
 
-            
-            /*
-            animator.SetFloat("Horizontal", previousPos.x);
-            animator.SetFloat("Vertical", previousPos.y);
-            animator.SetFloat("Speed", previousPos.sqrMagnitude);*/
+            transform.position = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z);
+
+            if (animator != null) 
+            {
+                Vector3 movement = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z);
+                animator.SetFloat("Horizontal", 1);
+                animator.SetFloat("Speed", transform.position.sqrMagnitude);
+            }
         }
 
         if (previousPos.x - transform.position.x >= 0.01f)

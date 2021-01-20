@@ -338,6 +338,7 @@ MonoBehaviour:
   projectile: {fileID: 3085741761693465407, guid: e3effa947a834ae4ebaeeed9b87fa4eb, type: 3}
   StoneDelay: 2
   moving: line
+  animator: {fileID: 5138228827465667582}
   Healthbar: {fileID: 703366029906394134}
 --- !u!95 &5138228827465667582
 Animator:

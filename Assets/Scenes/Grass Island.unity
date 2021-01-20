@@ -63972,7 +63972,7 @@ MonoBehaviour:
   CraftingTableButton: {fileID: 1545121650}
   LeaveButton: {fileID: 1200494114}
   SceneName: Grass Island
-  ShipDelay: 60
+  ShipDelay: 5
 --- !u!4 &1570501359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4835138364229008372, guid: d40c18f53a5d7da4188dcd7d4e5755b4, type: 3}

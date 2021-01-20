@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI HealthText;
 
     public AudioClip Footstep;
+    public AudioClip TakeDamage;
 
     private float health;
     private Inventory inventory;
@@ -57,6 +58,10 @@ public class Player : MonoBehaviour
 
     public void SetHealth(float value)
     {
+        if (value < health) 
+        {
+            GetComponent<AudioSource>().PlayOneShot(TakeDamage); 
+        }
         health = Mathf.Max(value, 0);
         health = Mathf.Clamp(health, 0, 100);
         HealthText.text = health.ToString();

@@ -19,6 +19,8 @@ public class PlayerShooting : MonoBehaviour
 
     public PlayerProjectile projectile;
 
+    public AudioClip ThrowRock;
+
     List<string> tags;
 
 
@@ -49,6 +51,7 @@ public class PlayerShooting : MonoBehaviour
         }
         if (nextTime < Time.time && canShoot && isStoneSelected() && Input.GetMouseButtonDown(0))
         {
+            GetComponent<AudioSource>().PlayOneShot(ThrowRock);
             PlayerProjectile pro = GameObject.Instantiate<PlayerProjectile>(projectile, transform.position, Quaternion.identity, null);
             pro.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
 
