@@ -28,6 +28,8 @@ public class EnemyHealth : MonoBehaviour
     public DropProbabilityData Data;
     public GameObject stone;
 
+    public AudioClip DealDamage;
+
     void Start()
     {
         CurrentHealth = MaxHealth;
@@ -64,6 +66,7 @@ public class EnemyHealth : MonoBehaviour
             Interactable weapon = getSelected();
             if (Time.time > nextHit && weapon != null)
             {
+                GetComponent<AudioSource>().PlayOneShot(DealDamage);
                 CurrentHealth -= weapon.damage;
                 StartCoroutine(gotDamage());
                 Healthbar.sizeDelta = new Vector2(CurrentHealth / MaxHealth * 100, Healthbar.sizeDelta.y);

@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
 
     public AudioClip Footstep;
     public AudioClip TakeDamage;
+    
 
     private float health;
     private Inventory inventory;

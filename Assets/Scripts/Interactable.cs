@@ -12,6 +12,8 @@ public class Interactable : MonoBehaviour
     public int maxStack;
     public float damage = 0;
     public float cooldown = 1;
+
+   
     
     private float nextTime;
 
@@ -35,8 +37,15 @@ public class Interactable : MonoBehaviour
             int slot = IsStackable();
             if (slot >= 0 && Input.GetKey(KeyCode.Q))
             {
+                
+                
                 Destroy(gameObject);
                 inventory.count[slot] += 1;
+
+                
+                
+                
+                
             }
             else if (slot == -1) {
                 for (int i = 0; i < inventory.slots.Length; i++)
