@@ -54,7 +54,26 @@ public class EnemyHealth : MonoBehaviour
             Healthbar.sizeDelta = new Vector2(CurrentHealth / MaxHealth * 100, Healthbar.sizeDelta.y);
             if (CurrentHealth <= 0)
             {
+                if (drop != null)
+                {
 
+                    Interactable item1 = Instantiate(drop, transform.position, Quaternion.identity);
+                    item1.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                }
+                else
+                {
+                    int count = 0;
+                    for (int i = 0; i < Data.Items.Length; i++)
+                    {
+                        if (Random.value <= Data.Probability[i] && count <= 2)
+                        {
+                            Interactable item1 = Instantiate(Data.Items[i], transform.position, Quaternion.identity);
+                            item1.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                            count += 1;
+
+                        }
+                    }
+                }
                 Destroy(transform.parent.gameObject);
             }
 
@@ -82,12 +101,14 @@ public class EnemyHealth : MonoBehaviour
                     }
                     else
                     {
+                        int count = 0;
                         for (int i = 0; i < Data.Items.Length; i++)
                         {
-                            if (Random.value <= Data.Probability[i])
+                            if (Random.value <= Data.Probability[i] && count<= 2)
                             {
                                 Interactable item = Instantiate(Data.Items[i], transform.position, Quaternion.identity);
                                 item.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
+                                count += 1;
                             }
                         }
                     }

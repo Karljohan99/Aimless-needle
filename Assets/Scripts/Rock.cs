@@ -27,7 +27,7 @@ public class Rock : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         InventoryButton pickaxe = isPickaxeSelected();
-        if (cooldown < Time.time && collision.CompareTag("Player") && pickaxe != null && Input.GetKey(KeyCode.R))
+        if (cooldown < Time.time && collision.CompareTag("Player") && pickaxe != null && Input.GetKey(KeyCode.Space))
         {
             Destroy(gameObject);
             pickaxe.GetComponent<AudioSource>().Play();
