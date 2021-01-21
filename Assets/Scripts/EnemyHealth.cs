@@ -23,7 +23,7 @@ public class EnemyHealth : MonoBehaviour
 
     private float nextHit2;
 
-    public GameObject drop;
+    public Interactable drop;
 
     public DropProbabilityData Data;
     public GameObject stone;
@@ -35,6 +35,7 @@ public class EnemyHealth : MonoBehaviour
         CurrentHealth = MaxHealth;
         nextHit = Time.time;
         sprite = GetComponent<SpriteRenderer>();
+        
     }
 
 
@@ -76,7 +77,7 @@ public class EnemyHealth : MonoBehaviour
                     if (drop != null)
                     {
 
-                        GameObject item = Instantiate(drop, transform.position, drop.transform.rotation);
+                        Interactable item = Instantiate(drop, transform.position, Quaternion.identity);
                         item.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
                     }
                     else
@@ -119,6 +120,12 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator gotDamage()
     {
+        if (sprite.sprite == null)
+        {
+            sprite = gameObject.transform.parent.GetComponent<SpriteRenderer>();
+        }
+
+
         sprite.color = new Color(1, 1, 1, 0.2f);
         yield return new WaitForSeconds(0.07f);
         sprite.color = new Color(1, 1, 1, 1);

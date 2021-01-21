@@ -66,7 +66,7 @@ public class Enemy2moving : MonoBehaviour
             else if (Time.time >= NextSpawnTime)
             {
                 NextSpawnTime += StoneDelay;
-            }
+            } 
 
         }
         else { NextSpawnTime = Time.time; }
@@ -118,10 +118,7 @@ public class Enemy2moving : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, lineOfSite);
     }
 
-    public void PlayFootstep()
-    {
-        //GetComponent<AudioSource>().PlayOneShot(Footstep);
-    }
+    
 
 
     private void OnBecameVisible()

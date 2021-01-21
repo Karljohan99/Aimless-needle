@@ -66,7 +66,7 @@ public class Showel : MonoBehaviour
     {
         foreach (Slot slot in inventory.slots)
         {
-            if (slot.isSelected && slot.tag == "Stone Shovel") return true;
+            if (slot.isSelected && (slot.tag == "Stone Shovel" || slot.tag == "Steel Shovel" || slot.tag == "Blue Shovel" || slot.tag == "Rose Shovel")) return true;
         }
         return false;
     }

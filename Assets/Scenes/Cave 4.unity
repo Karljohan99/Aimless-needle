@@ -364,7 +364,7 @@ PrefabInstance:
     - target: {fileID: 1534018787, guid: a0b09b1efa5211540aee28b177277dd7, type: 3}
       propertyPath: drop
       value: 
-      objectReference: {fileID: 7259743574244962740, guid: a9f1d4018a8b5924395448d90a7434be, type: 3}
+      objectReference: {fileID: 7259743574244962698, guid: d2f7eaefea107244498e8c1d2e74f4ff, type: 3}
     - target: {fileID: 1107728019730610544, guid: a0b09b1efa5211540aee28b177277dd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.2
@@ -429,6 +429,10 @@ PrefabInstance:
       propertyPath: max
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1774694624914737948, guid: a0b09b1efa5211540aee28b177277dd7, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 4303792679037171248, guid: a8783b65c4a83f64c83f8485a0e17994, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b09b1efa5211540aee28b177277dd7, type: 3}
 --- !u!4 &243429299 stripped
@@ -27580,7 +27584,7 @@ PrefabInstance:
     - target: {fileID: 1534018787, guid: b5abbe018534718458ab9e346f11146a, type: 3}
       propertyPath: drop
       value: 
-      objectReference: {fileID: 7259743574244962740, guid: d2f7eaefea107244498e8c1d2e74f4ff, type: 3}
+      objectReference: {fileID: 7259743574244962698, guid: d2f7eaefea107244498e8c1d2e74f4ff, type: 3}
     - target: {fileID: 1534018787, guid: b5abbe018534718458ab9e346f11146a, type: 3}
       propertyPath: EnemyDamage
       value: 10

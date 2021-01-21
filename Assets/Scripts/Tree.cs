@@ -34,7 +34,7 @@ public class Tree : MonoBehaviour
     {
         foreach (Slot slot in inventory.slots)
         {
-            if (slot.isSelected && slot.tag == "Stone Axe") return slot.transform.GetChild(1).GetComponent<InventoryButton>();
+            if (slot.isSelected && (slot.tag == "Stone Axe" || slot.tag == "Steel Axe" || slot.tag == "Blue Axe" || slot.tag == "Rose Axe")) return slot.transform.GetChild(1).GetComponent<InventoryButton>();
         }
         return null;
     }

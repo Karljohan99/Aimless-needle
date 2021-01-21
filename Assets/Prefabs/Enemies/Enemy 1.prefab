@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  lineOfSite: 6.88
+  lineOfSite: 6
   min: 2
   max: 3
   projectile: {fileID: 3085741761693465407, guid: e3effa947a834ae4ebaeeed9b87fa4eb, type: 3}

@@ -17,6 +17,7 @@ public class Respawn : MonoBehaviour
 
     public void RespawnPlayer() 
     {
+        player.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         gameObject.SetActive(false);
         player.SetActive(true);
         Events.SetHealth(100);

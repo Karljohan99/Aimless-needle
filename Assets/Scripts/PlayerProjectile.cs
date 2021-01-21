@@ -38,6 +38,7 @@ public class PlayerProjectile : MonoBehaviour
             GameObject item = Instantiate(drop, transform.position, drop.transform.rotation);
             item.transform.SetParent(GameObject.FindGameObjectWithTag(Events.RequestSceneName()).transform);
             dropped = true;
+            Destroy(this.gameObject);
         }
 
 

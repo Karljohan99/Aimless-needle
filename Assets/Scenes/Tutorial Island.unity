@@ -129310,6 +129310,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1181607858}
     m_Modifications:
+    - target: {fileID: 1534018787, guid: 54cf25835f96ecf4d81ced32b147098d, type: 3}
+      propertyPath: MaxHealth
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534018787, guid: 54cf25835f96ecf4d81ced32b147098d, type: 3}
+      propertyPath: EnemyDamage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1107728019730610544, guid: 54cf25835f96ecf4d81ced32b147098d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.378823
@@ -129358,11 +129366,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1774694624914737948, guid: 54cf25835f96ecf4d81ced32b147098d, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 794100253}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54cf25835f96ecf4d81ced32b147098d, type: 3}
 --- !u!4 &794100252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1107728019730610544, guid: 54cf25835f96ecf4d81ced32b147098d, type: 3}
+  m_PrefabInstance: {fileID: 794100251}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &794100253 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2569050857866455436, guid: 54cf25835f96ecf4d81ced32b147098d, type: 3}
   m_PrefabInstance: {fileID: 794100251}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &917564602
@@ -130572,6 +130589,10 @@ PrefabInstance:
       propertyPath: drop
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1534018787, guid: 82415874f44544e418c43e6f0aa75a71, type: 3}
+      propertyPath: MaxHealth
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1107728019730610544, guid: 82415874f44544e418c43e6f0aa75a71, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.17
@@ -130619,6 +130640,10 @@ PrefabInstance:
     - target: {fileID: 1107728019730610556, guid: 82415874f44544e418c43e6f0aa75a71, type: 3}
       propertyPath: m_Name
       value: Enemy 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774694624914737948, guid: 82415874f44544e418c43e6f0aa75a71, type: 3}
+      propertyPath: lineOfSite
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9084330873655289792, guid: 82415874f44544e418c43e6f0aa75a71, type: 3}
       propertyPath: m_SortingLayerID

@@ -73,7 +73,7 @@ public class Rock : MonoBehaviour
     {
         foreach (Slot slot in inventory.slots)
         {
-            if (slot.isSelected && slot.tag == "Stone Pickaxe") return slot.transform.GetChild(1).GetComponent<InventoryButton>();
+            if (slot.isSelected && (slot.tag == "Stone Pickaxe" || slot.tag == "Steel Pickaxe" || slot.tag == "Blue Pickaxe" || slot.tag == "Rose Pickaxe")) return slot.transform.GetChild(1).GetComponent<InventoryButton>();
         }
         return null;
     }
